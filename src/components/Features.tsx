@@ -40,9 +40,9 @@ const Features = () => {
     },
     {
       icon: Cpu,
-      title: "Умная интеграция",
-      description: "Прямая интеграция с IDE, Git, Jira и другими инструментами разработки",
-      highlight: "20+ интеграций"
+      title: "Интеграция VS Code",
+      description: "Полная интеграция с VS Code, Git, терминалом и другими инструментами",
+      highlight: "Native VS Code"
     },
     {
       icon: Clock,
@@ -82,11 +82,11 @@ const Features = () => {
             Возможности платформы
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Почему выбирают DevMode AI
+            Почему выбирают AI IDE BAS
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             Мощные возможности и современные технологии для ускорения разработки 
-            и повышения качества кода
+            прямо в VS Code с повышением качества кода
           </p>
         </div>
 

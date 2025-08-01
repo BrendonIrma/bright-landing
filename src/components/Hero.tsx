@@ -65,15 +65,15 @@ function reviewCode(pullRequest) {
           </Badge>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
-            Умный помощник
+            Умное расширение
             <br />
-            для команд разработки
+            для VS Code
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            DevMode AI объединяет в себе пять специализированных режимов работы: 
+            AI IDE BAS объединяет в себе пять специализированных режимов работы: 
             Business Analyst, Architect, System Analyst, Code Reviewer и Designer. 
-            Один инструмент для всего цикла разработки.
+            Один инструмент для всего цикла разработки прямо в VS Code.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">

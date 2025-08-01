@@ -36,17 +36,18 @@ const QuickStart = () => {
     }
   ];
 
-  const codeExample = `# Установка CLI
-npm install -g devmode-ai
+  const codeExample = `# Установка расширения
+1. Откройте VS Code
+2. Перейдите в Extensions (Ctrl+Shift+X)
+3. Найдите "AI IDE BAS"
+4. Нажмите Install
 
-# Вход в аккаунт
-devmode auth login
+# Быстрый старт
+Ctrl+Shift+P -> AI IDE BAS: Start
+Выберите режим: BA | Architect | SA | Reviewer | Designer
 
-# Запуск в режиме архитектора
-devmode architect --project ./my-app
-
-# Анализ кодабазы
-devmode review --files "src/**/*.ts"`;
+# Анализ текущего файла
+Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
 
   return (
     <section id="quickstart" className="py-20 relative overflow-hidden">
@@ -121,7 +122,7 @@ devmode review --files "src/**/*.ts"`;
                 <div className="flex items-center justify-between">
                   <div className="flex items-center space-x-2">
                     <Terminal className="w-5 h-5 text-primary" />
-                    <CardTitle className="text-lg">CLI Quick Start</CardTitle>
+                    <CardTitle className="text-lg">VS Code Extension Setup</CardTitle>
                   </div>
                   <Button variant="ghost" size="sm">
                     <Copy className="w-4 h-4 mr-2" />
@@ -138,10 +139,10 @@ devmode review --files "src/**/*.ts"`;
                 
                 <div className="mt-6 space-y-3">
                   {[
-                    "Поддержка всех популярных IDE",
-                    "Интеграция с Git workflows",
-                    "Командная работа из коробки",
-                    "API для кастомных интеграций"
+                    "Нативная интеграция с VS Code",
+                    "Работа с Git из коробки",
+                    "Синхронизация с командой",
+                    "Поддержка всех языков VS Code"
                   ].map((feature, index) => (
                     <div key={index} className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
@@ -162,7 +163,7 @@ devmode review --files "src/**/*.ts"`;
                 Нужна помощь с настройкой?
               </h3>
               <p className="text-muted-foreground mb-6">
-                Наша команда поможет настроить DevMode AI под ваши процессы
+                Наша команда поможет настроить AI IDE BAS под ваши процессы разработки
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="outline">
