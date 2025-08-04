@@ -10,27 +10,30 @@ import {
   Copy,
   Terminal
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const QuickStart = () => {
+  const { t } = useLanguage();
+  
   const steps = [
     {
       step: "01",
-      title: "Создайте аккаунт",
-      description: "Быстрая регистрация через GitHub или email за 30 секунд",
+      title: t('quickstart.step1.title'),
+      description: t('quickstart.step1.description'),
       icon: User,
       time: "30 сек"
     },
     {
       step: "02", 
-      title: "Выберите режим",
-      description: "Определите задачу и выберите подходящий режим работы AI",
+      title: t('quickstart.step2.title'),
+      description: t('quickstart.step2.description'),
       icon: Settings,
       time: "1 мин"
     },
     {
       step: "03",
-      title: "Начните работу",
-      description: "Опишите задачу и получите экспертные рекомендации",
+      title: t('quickstart.step3.title'),
+      description: t('quickstart.step3.description'),
       icon: Rocket,
       time: "2 мин"
     }
@@ -59,13 +62,13 @@ Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
         <div className="text-center mb-16 animate-fade-in">
           <Badge variant="outline" className="mb-4">
             <Rocket className="w-4 h-4 mr-2" />
-            Быстрый старт
+            {t('quickstart.badge')}
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Начните за 3 простых шага
+            {t('quickstart.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            От регистрации до первых результатов — меньше 5 минут
+            {t('quickstart.description')}
           </p>
         </div>
 
@@ -109,7 +112,7 @@ Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
 
             <div className="pt-4">
               <Button variant="hero" size="lg" className="w-full">
-                Начать бесплатно
+                {t('quickstart.button')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
@@ -126,7 +129,7 @@ Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
                   </div>
                   <Button variant="ghost" size="sm">
                     <Copy className="w-4 h-4 mr-2" />
-                    Копировать
+                    {t('quickstart.copy')}
                   </Button>
                 </div>
               </CardHeader>
@@ -139,10 +142,10 @@ Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
                 
                 <div className="mt-6 space-y-3">
                   {[
-                    "Нативная интеграция с VS Code",
-                    "Работа с Git из коробки",
-                    "Синхронизация с командой",
-                    "Поддержка всех языков VS Code"
+                    t('quickstart.features.0'),
+                    t('quickstart.features.1'),
+                    t('quickstart.features.2'),
+                    t('quickstart.features.3')
                   ].map((feature, index) => (
                     <div key={index} className="flex items-center text-sm">
                       <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
@@ -160,17 +163,17 @@ Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
           <Card className="max-w-2xl mx-auto bg-gradient-glass">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold mb-4">
-                Нужна помощь с настройкой?
+                {t('quickstart.help.title')}
               </h3>
               <p className="text-muted-foreground mb-6">
-                Наша команда поможет настроить AI IDE BAS под ваши процессы разработки
+                {t('quickstart.help.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="outline">
-                  Посмотреть документацию
+                  {t('quickstart.help.docs')}
                 </Button>
                 <Button variant="default">
-                  Связаться с нами
+                  {t('quickstart.help.contact')}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </div>

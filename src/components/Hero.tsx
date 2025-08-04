@@ -3,14 +3,16 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Play, Sparkles, Zap, Brain, Code2 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
   const [activeDemo, setActiveDemo] = useState("architect");
+  const { t } = useLanguage();
 
   const demoModes = {
     architect: {
-      title: "Режим Архитектора",
-      description: "Проектирование системной архитектуры",
+      title: t('hero.mode.architect.title'),
+      description: t('hero.mode.architect.description'),
       code: `// Архитектурный анализ системы
 class SystemArchitect {
   designMicroservices() {
@@ -24,8 +26,8 @@ class SystemArchitect {
       icon: Brain,
     },
     ba: {
-      title: "Режим BA",
-      description: "Анализ бизнес-требований",
+      title: t('hero.mode.ba.title'),
+      description: t('hero.mode.ba.description'),
       code: `// Анализ требований
 interface BusinessRequirement {
   feature: string;
@@ -36,8 +38,8 @@ interface BusinessRequirement {
       icon: Sparkles,
     },
     reviewer: {
-      title: "Режим Ревьюера",
-      description: "Проверка кода и архитектуры",
+      title: t('hero.mode.reviewer.title'),
+      description: t('hero.mode.reviewer.description'),
       code: `// Code Review Analysis
 function reviewCode(pullRequest) {
   const issues = [];
@@ -61,29 +63,30 @@ function reviewCode(pullRequest) {
         <div className="text-center mb-16 animate-fade-in">
           <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">
             <Sparkles className="w-4 h-4 mr-2" />
-            Революция в разработке
+            {t('hero.badge')}
           </Badge>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
-            Умное расширение
-            <br />
-            для VS Code
+            {t('hero.title').split('\n').map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                {index === 0 && <br />}
+              </React.Fragment>
+            ))}
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
-            AI IDE BAS объединяет в себе пять специализированных режимов работы: 
-            Business Analyst, Architect, System Analyst, Code Reviewer и Designer. 
-            Один инструмент для всего цикла разработки прямо в VS Code.
+            {t('hero.description')}
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
             <Button variant="hero" size="hero" className="animate-scale-in">
-              Начать бесплатно
+              {t('hero.startFree')}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button variant="glass" size="hero" className="animate-scale-in">
               <Play className="w-5 h-5 mr-2" />
-              Посмотреть демо
+              {t('hero.watchDemo')}
             </Button>
           </div>
         </div>
@@ -91,7 +94,7 @@ function reviewCode(pullRequest) {
         {/* Demo Section */}
         <div className="max-w-6xl mx-auto animate-slide-up">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-semibold mb-4">Попробуйте разные режимы</h3>
+            <h3 className="text-2xl font-semibold mb-4">{t('hero.tryModes')}</h3>
             <div className="flex flex-wrap justify-center gap-3">
               {Object.entries(demoModes).map(([key, mode]) => {
                 const IconComponent = mode.icon;
@@ -127,7 +130,7 @@ function reviewCode(pullRequest) {
                     {demoModes[activeDemo].description}
                   </p>
                   <Button variant="outline" size="sm">
-                    Попробовать режим
+                    {t('hero.tryMode')}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Button>
                 </div>

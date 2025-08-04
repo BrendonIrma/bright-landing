@@ -1,16 +1,18 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github, ArrowUpRight } from "lucide-react";
+import { Menu, X, Github, ArrowUpRight, Globe } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { t, language, setLanguage } = useLanguage();
 
   const navigation = [
-    { name: "Возможности", href: "#features" },
-    { name: "Режимы", href: "#modes" },
-    { name: "Начать", href: "#quickstart" },
-    { name: "Интеграции", href: "#integrations" },
-    { name: "Сообщество", href: "#community" },
+    { name: t('header.features'), href: "#features" },
+    { name: t('header.modes'), href: "#modes" },
+    { name: t('header.quickstart'), href: "#quickstart" },
+    { name: t('header.integrations'), href: "#integrations" },
+    { name: t('header.community'), href: "#community" },
   ];
 
   return (
@@ -42,12 +44,20 @@ const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center space-x-4">
+            <Button 
+              variant="ghost" 
+              size="sm"
+              onClick={() => setLanguage(language === 'ru' ? 'en' : 'ru')}
+            >
+              <Globe className="w-4 h-4 mr-2" />
+              {language === 'ru' ? 'EN' : 'RU'}
+            </Button>
             <Button variant="ghost" size="sm">
               <Github className="w-4 h-4 mr-2" />
-              GitHub
+              {t('header.github')}
             </Button>
             <Button variant="hero" size="sm">
-              Попробовать
+              {t('header.tryNow')}
               <ArrowUpRight className="w-4 h-4 ml-1" />
             </Button>
           </div>
@@ -79,12 +89,21 @@ const Header = () => {
                 </a>
               ))}
               <div className="pt-4 border-t border-glass-border space-y-2">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="w-full justify-start"
+                  onClick={() => setLanguage(language === 'ru' ? 'en' : 'ru')}
+                >
+                  <Globe className="w-4 h-4 mr-2" />
+                  {language === 'ru' ? 'EN' : 'RU'}
+                </Button>
                 <Button variant="ghost" size="sm" className="w-full justify-start">
                   <Github className="w-4 h-4 mr-2" />
-                  GitHub
+                  {t('header.github')}
                 </Button>
                 <Button variant="hero" size="sm" className="w-full">
-                  Попробовать
+                  {t('header.tryNow')}
                   <ArrowUpRight className="w-4 h-4 ml-1" />
                 </Button>
               </div>

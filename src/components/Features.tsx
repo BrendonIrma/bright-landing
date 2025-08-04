@@ -11,61 +11,64 @@ import {
   Database,
   Puzzle
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Features = () => {
+  const { t } = useLanguage();
+  
   const features = [
     {
       icon: Bot,
-      title: "ИИ нового поколения",
-      description: "Современные LLM модели, обученные на актуальных практиках разработки",
+      title: t('features.ai.title'),
+      description: t('features.ai.description'),
       highlight: "GPT-4 & Claude"
     },
     {
       icon: Zap,
-      title: "Мгновенные результаты",
-      description: "Получайте качественные решения за секунды, а не часы",
+      title: t('features.speed.title'),
+      description: t('features.speed.description'),
       highlight: "< 2 сек"
     },
     {
       icon: Shield,
-      title: "Безопасность данных",
-      description: "Корпоративный уровень защиты с шифрованием и приватными инстансами",
+      title: t('features.security.title'),
+      description: t('features.security.description'),
       highlight: "SOC 2 Type II"
     },
     {
       icon: Globe,
-      title: "Поддержка языков",
-      description: "Работает с любыми языками программирования и фреймворками",
+      title: t('features.languages.title'),
+      description: t('features.languages.description'),
       highlight: "50+ языков"
     },
     {
       icon: Cpu,
-      title: "Интеграция VS Code",
-      description: "Полная интеграция с VS Code, Git, терминалом и другими инструментами",
+      title: t('features.integration.title'),
+      description: t('features.integration.description'),
       highlight: "Native VS Code"
     },
     {
       icon: Clock,
-      title: "24/7 доступность",
-      description: "Ваш AI-помощник всегда готов помочь в любое время суток",
+      title: t('features.availability.title'),
+      description: t('features.availability.description'),
       highlight: "99.9% uptime"
     },
     {
       icon: GitBranch,
-      title: "Версионирование",
-      description: "Полная история изменений и возможность откатов",
+      title: t('features.versioning.title'),
+      description: t('features.versioning.description'),
       highlight: "Git-like"
     },
     {
       icon: Database,
-      title: "База знаний",
-      description: "Огромная база паттернов, best practices и решений",
+      title: t('features.knowledge.title'),
+      description: t('features.knowledge.description'),
       highlight: "10M+ примеров"
     },
     {
       icon: Puzzle,
-      title: "Командная работа",
-      description: "Совместная работа над проектами с общим контекстом",
+      title: t('features.team.title'),
+      description: t('features.team.description'),
       highlight: "Team-ready"
     }
   ];
@@ -79,14 +82,13 @@ const Features = () => {
         <div className="text-center mb-16 animate-fade-in">
           <Badge variant="outline" className="mb-4">
             <Zap className="w-4 h-4 mr-2" />
-            Возможности платформы
+            {t('features.badge')}
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Почему выбирают AI IDE BAS
+            {t('features.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Мощные возможности и современные технологии для ускорения разработки 
-            прямо в VS Code с повышением качества кода
+            {t('features.description')}
           </p>
         </div>
 
@@ -125,10 +127,10 @@ const Features = () => {
         {/* Stats Section */}
         <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { value: "50K+", label: "Разработчиков" },
-            { value: "1M+", label: "Проектов" },
-            { value: "99.9%", label: "Uptime" },
-            { value: "24/7", label: "Поддержка" }
+            { value: "50K+", label: t('features.stats.developers') },
+            { value: "1M+", label: t('features.stats.projects') },
+            { value: "99.9%", label: t('features.stats.uptime') },
+            { value: "24/7", label: t('features.stats.support') }
           ].map((stat, index) => (
             <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
               <div className="text-2xl md:text-3xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">

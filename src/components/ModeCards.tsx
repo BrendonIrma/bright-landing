@@ -12,19 +12,22 @@ import {
   Code,
   Users
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const ModeCards = () => {
+  const { t } = useLanguage();
+  
   const modes = [
     {
       id: "ba",
-      title: "Business Analyst",
+      title: t('modes.ba.title'),
       shortTitle: "BA",
-      description: "Анализируйте бизнес-требования, создавайте user stories и планируйте функциональность продукта",
+      description: t('modes.ba.description'),
       features: [
-        "Анализ требований",
-        "User Story генерация", 
-        "Планирование MVP",
-        "Stakeholder mapping"
+        t('modes.ba.features.0'),
+        t('modes.ba.features.1'), 
+        t('modes.ba.features.2'),
+        t('modes.ba.features.3')
       ],
       icon: Lightbulb,
       color: "from-blue-500 to-cyan-500",
@@ -32,14 +35,14 @@ const ModeCards = () => {
     },
     {
       id: "architect",
-      title: "System Architect",
+      title: t('modes.architect.title'),
       shortTitle: "Architect",
-      description: "Проектируйте архитектуру системы, выбирайте технологии и создавайте диаграммы компонентов",
+      description: t('modes.architect.description'),
       features: [
-        "Архитектурные паттерны",
-        "Выбор технологий",
-        "Диаграммы системы",
-        "Масштабируемость"
+        t('modes.architect.features.0'),
+        t('modes.architect.features.1'),
+        t('modes.architect.features.2'),
+        t('modes.architect.features.3')
       ],
       icon: Brain,
       color: "from-purple-500 to-indigo-500",
@@ -47,14 +50,14 @@ const ModeCards = () => {
     },
     {
       id: "sa",
-      title: "System Analyst",
+      title: t('modes.sa.title'),
       shortTitle: "SA",
-      description: "Анализируйте системные процессы, оптимизируйте workflow и документируйте интеграции",
+      description: t('modes.sa.description'),
       features: [
-        "Процессный анализ",
-        "Интеграционные схемы",
-        "Workflow оптимизация",
-        "Техническая документация"
+        t('modes.sa.features.0'),
+        t('modes.sa.features.1'),
+        t('modes.sa.features.2'),
+        t('modes.sa.features.3')
       ],
       icon: Settings,
       color: "from-green-500 to-emerald-500",
@@ -62,14 +65,14 @@ const ModeCards = () => {
     },
     {
       id: "reviewer",
-      title: "Code Reviewer",
+      title: t('modes.reviewer.title'),
       shortTitle: "Reviewer",
-      description: "Проводите ревью кода, находите уязвимости и предлагайте улучшения архитектуры",
+      description: t('modes.reviewer.description'),
       features: [
-        "Code review",
-        "Поиск уязвимостей",
-        "Рефакторинг",
-        "Best practices"
+        t('modes.reviewer.features.0'),
+        t('modes.reviewer.features.1'),
+        t('modes.reviewer.features.2'),
+        t('modes.reviewer.features.3')
       ],
       icon: Shield,
       color: "from-red-500 to-orange-500",
@@ -77,14 +80,14 @@ const ModeCards = () => {
     },
     {
       id: "designer",
-      title: "UX/UI Designer",
+      title: t('modes.designer.title'),
       shortTitle: "Designer",
-      description: "Создавайте пользовательские интерфейсы, проводите UX-исследования и прототипируйте",
+      description: t('modes.designer.description'),
       features: [
-        "UI/UX дизайн",
-        "Прототипирование",
-        "User research",
-        "Design системы"
+        t('modes.designer.features.0'),
+        t('modes.designer.features.1'),
+        t('modes.designer.features.2'),
+        t('modes.designer.features.3')
       ],
       icon: Palette,
       color: "from-pink-500 to-rose-500",
@@ -103,14 +106,13 @@ const ModeCards = () => {
         <div className="text-center mb-16 animate-fade-in">
           <Badge variant="outline" className="mb-4">
             <Users className="w-4 h-4 mr-2" />
-            Режимы работы
+            {t('modes.badge')}
           </Badge>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Пять экспертов в одном инструменте
+            {t('modes.title')}
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Каждый режим специализируется на определенной области разработки, 
-            обеспечивая экспертный уровень помощи на каждом этапе проекта
+            {t('modes.description')}
           </p>
         </div>
 
@@ -159,7 +161,7 @@ const ModeCards = () => {
                     size="sm" 
                     className="w-full group-hover:bg-primary/10 transition-colors"
                   >
-                    Попробовать режим
+                    {t('modes.tryMode')}
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </CardContent>
@@ -174,13 +176,13 @@ const ModeCards = () => {
             <CardContent className="p-8">
               <Code className="w-12 h-12 mx-auto mb-4 text-primary" />
               <h3 className="text-2xl font-semibold mb-4">
-                Готовы попробовать все режимы?
+                {t('modes.cta.title')}
               </h3>
               <p className="text-muted-foreground mb-6">
-                Начните с бесплатного аккаунта и получите доступ ко всем режимам работы
+                {t('modes.cta.description')}
               </p>
               <Button variant="hero" size="lg">
-                Начать бесплатно
+                {t('modes.cta.button')}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </CardContent>
