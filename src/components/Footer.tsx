@@ -59,10 +59,10 @@ const Footer = () => {
             <div className="lg:col-span-2 space-y-6">
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold text-sm">DM</span>
+                  <span className="text-white font-bold text-sm">AI</span>
                 </div>
                 <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
-                  DevMode AI
+                  AI IDE BAS
                 </span>
               </div>
               
