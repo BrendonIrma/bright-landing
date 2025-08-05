@@ -34,21 +34,6 @@ const ModeCards = () => {
       bgGlow: "bg-blue-500/10",
     },
     {
-      id: "architect",
-      title: t('modes.architect.title'),
-      shortTitle: "Architect",
-      description: t('modes.architect.description'),
-      features: [
-        t('modes.architect.features.0'),
-        t('modes.architect.features.1'),
-        t('modes.architect.features.2'),
-        t('modes.architect.features.3')
-      ],
-      icon: Brain,
-      color: "from-purple-500 to-indigo-500",
-      bgGlow: "bg-purple-500/10",
-    },
-    {
       id: "sa",
       title: t('modes.sa.title'),
       shortTitle: "SA",
@@ -62,6 +47,21 @@ const ModeCards = () => {
       icon: Settings,
       color: "from-green-500 to-emerald-500",
       bgGlow: "bg-green-500/10",
+    },
+    {
+      id: "architect",
+      title: t('modes.architect.title'),
+      shortTitle: "Architect",
+      description: t('modes.architect.description'),
+      features: [
+        t('modes.architect.features.0'),
+        t('modes.architect.features.1'),
+        t('modes.architect.features.2'),
+        t('modes.architect.features.3')
+      ],
+      icon: Brain,
+      color: "from-purple-500 to-indigo-500",
+      bgGlow: "bg-purple-500/10",
     },
     {
       id: "reviewer",
@@ -156,14 +156,6 @@ const ModeCards = () => {
                     ))}
                   </div>
 
-                  <Button 
-                    variant="ghost" 
-                    size="sm" 
-                    className="w-full group-hover:bg-primary/10 transition-colors"
-                  >
-                    {t('modes.tryMode')}
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
                 </CardContent>
               </Card>
             );

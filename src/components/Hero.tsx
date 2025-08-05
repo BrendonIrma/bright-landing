@@ -6,48 +6,50 @@ import { ArrowRight, Play, Sparkles, Zap, Brain, Code2 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
-  const [activeDemo, setActiveDemo] = useState("architect");
+  const [activeDemo, setActiveDemo] = useState("ba");
   const { t } = useLanguage();
 
   const demoModes = {
-    architect: {
-      title: t('hero.mode.architect.title'),
-      description: t('hero.mode.architect.description'),
-      code: `// Архитектурный анализ системы
-class SystemArchitect {
-  designMicroservices() {
-    return {
-      services: ['auth', 'user', 'payment'],
-      patterns: ['CQRS', 'Event Sourcing'],
-      scalability: 'horizontal'
-    };
-  }
-}`,
-      icon: Brain,
-    },
     ba: {
       title: t('hero.mode.ba.title'),
       description: t('hero.mode.ba.description'),
-      code: `// Анализ требований
-interface BusinessRequirement {
-  feature: string;
-  priority: 'high' | 'medium' | 'low';
-  stakeholders: string[];
-  acceptance_criteria: string[];
-}`,
+      code: `# US-XXX: [Краткое название функциональности]
+
+Как <роль пользователя>,
+я хочу <желаемое действие/функциональность>,
+чтобы <ожидаемый результат/выгода>.
+
+## Критерии приемки
+- [ ] Пользователь может выполнить действие
+- [ ] Система обрабатывает запрос корректно
+- [ ] Результат соответствует ожиданиям`,
       icon: Sparkles,
+    },
+    sa: {
+      title: t('hero.mode.sa.title'),
+      description: t('hero.mode.sa.description'),
+      code: `@startuml
+title Процесс установки расширения AI IDE BAS
+
+actor Пользователь
+participant "VS Code" as VSCode
+
+Пользователь -> VSCode: Нажимает "Установить"
+VSCode -> VSCode: Устанавливает расширение
+VSCode -> Пользователь: Дает суперсилу
+@enduml`,
+      icon: Brain,
     },
     reviewer: {
       title: t('hero.mode.reviewer.title'),
       description: t('hero.mode.reviewer.description'),
-      code: `// Code Review Analysis
-function reviewCode(pullRequest) {
-  const issues = [];
-  if (!hasTests(pullRequest)) {
-    issues.push('Missing unit tests');
-  }
-  return { score: 8.5, issues };
-}`,
+      code: `**Проверка логической целостности:**
+- [ ] AS IS логически предшествует TO BE
+- [ ] Роли соответствуют реальным участникам процесса
+- [ ] Действия выполнимы в рамках предметной области
+- [ ] Результаты достижимы и измеримы
+
+**Статус:** ✅ Требования корректны`,
       icon: Zap,
     },
   };
@@ -126,13 +128,9 @@ function reviewCode(pullRequest) {
                       {demoModes[activeDemo].title}
                     </h4>
                   </div>
-                  <p className="text-muted-foreground mb-4">
+                  <p className="text-muted-foreground">
                     {demoModes[activeDemo].description}
                   </p>
-                  <Button variant="outline" size="sm">
-                    {t('hero.tryMode')}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
                 </div>
                 <div className="bg-muted/50 rounded-lg p-4 border border-glass-border">
                   <pre className="text-sm font-mono text-muted-foreground overflow-x-auto">
