@@ -80,7 +80,7 @@ const translations = {
     // Features
     'features.badge': 'Возможности платформы',
     'features.title': 'Почему выбирают AI IDE BAS',
-    'features.description': 'Мощные возможности и современные технологии для ускорения разработки прямо в VS Code с повышением качества кода',
+    'features.description': 'Современные AI технологии для автоматизации документирования, визуализации требований и упрощения рутинных процессов прямо в VS Code.',
     'features.ai.title': 'ИИ нового поколения',
     'features.ai.description': 'Современные LLM модели, обученные на актуальных практиках разработки',
     'features.speed.title': 'Мгновенные результаты',
@@ -222,7 +222,7 @@ const translations = {
     // Features
     'features.badge': 'Platform Features',
     'features.title': 'Why Choose AI IDE BAS',
-    'features.description': 'Powerful capabilities and modern technologies to accelerate development right in VS Code with improved code quality',
+    'features.description': 'Modern AI technologies for automating documentation, visualizing requirements and simplifying routine processes right in VS Code.',
     'features.ai.title': 'Next-Gen AI',
     'features.ai.description': 'Modern LLM models trained on current development practices',
     'features.speed.title': 'Instant Results',
