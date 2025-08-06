@@ -158,25 +158,6 @@ const Features = () => {
             })}
           </div>
         </div>
-
-        {/* Stats Section */}
-        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {[
-            { value: "50K+", label: t('features.stats.developers') },
-            { value: "1M+", label: t('features.stats.projects') },
-            { value: "99.9%", label: t('features.stats.uptime') },
-            { value: "24/7", label: t('features.stats.support') }
-          ].map((stat, index) => (
-            <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 200}ms` }}>
-              <div className="text-2xl md:text-3xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );
