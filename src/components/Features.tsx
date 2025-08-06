@@ -2,14 +2,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Zap, 
-  Shield, 
-  Globe, 
   Cpu, 
   Bot,
-  Clock,
+  ClipboardCheck,
+  FileText,
+  Settings,
   GitBranch,
-  Database,
-  Puzzle
+  Puzzle,
+  Clock
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -20,56 +20,50 @@ const Features = () => {
     {
       icon: Bot,
       title: t('features.ai.title'),
-      description: t('features.ai.description'),
-      highlight: "GPT-4 & Claude"
+      description: t('features.ai.description')
     },
     {
       icon: Zap,
       title: t('features.speed.title'),
-      description: t('features.speed.description'),
-      highlight: "< 2 сек"
-    },
-    {
-      icon: Shield,
-      title: t('features.security.title'),
-      description: t('features.security.description'),
-      highlight: "SOC 2 Type II"
-    },
-    {
-      icon: Globe,
-      title: t('features.languages.title'),
-      description: t('features.languages.description'),
-      highlight: "50+ языков"
+      description: t('features.speed.description')
     },
     {
       icon: Cpu,
       title: t('features.integration.title'),
-      description: t('features.integration.description'),
-      highlight: "Native VS Code"
+      description: t('features.integration.description')
     },
     {
-      icon: Clock,
-      title: t('features.availability.title'),
-      description: t('features.availability.description'),
-      highlight: "99.9% uptime"
+      icon: ClipboardCheck,
+      title: t('features.validation.title'),
+      description: t('features.validation.description')
+    },
+    {
+      icon: FileText,
+      title: t('features.templates.title'),
+      description: t('features.templates.description')
+    },
+    {
+      icon: Settings,
+      title: t('features.customization.title'),
+      description: t('features.customization.description')
+    }
+  ];
+
+  const inDevFeatures = [
+    {
+      icon: Puzzle,
+      title: t('features.team.title'),
+      description: t('features.team.description')
     },
     {
       icon: GitBranch,
       title: t('features.versioning.title'),
-      description: t('features.versioning.description'),
-      highlight: "Git-like"
+      description: t('features.versioning.description')
     },
     {
-      icon: Database,
-      title: t('features.knowledge.title'),
-      description: t('features.knowledge.description'),
-      highlight: "10M+ примеров"
-    },
-    {
-      icon: Puzzle,
-      title: t('features.team.title'),
-      description: t('features.team.description'),
-      highlight: "Team-ready"
+      icon: Settings,
+      title: t('features.customization.title'),
+      description: t('features.customization.description')
     }
   ];
 
@@ -102,13 +96,10 @@ const Features = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 relative z-10">
-                  <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center mb-4">
                     <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center text-white shadow-lg group-hover:shadow-glow transition-shadow duration-300">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <Badge variant="secondary" className="text-xs font-mono">
-                      {feature.highlight}
-                    </Badge>
                   </div>
                   
                   <h3 className="text-lg font-semibold mb-3 group-hover:text-primary transition-colors">
@@ -122,6 +113,50 @@ const Features = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* In Development Section */}
+        <div className="mt-20">
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4">
+              <Clock className="w-4 h-4 mr-2" />
+              {t('features.indev.badge')}
+            </Badge>
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              {t('features.indev.title')}
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              {t('features.indev.description')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {inDevFeatures.map((feature, index) => {
+              const IconComponent = feature.icon;
+              return (
+                <Card 
+                  key={index} 
+                  className="group relative overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-300"
+                >
+                  <CardContent className="p-6 relative z-10">
+                    <div className="flex items-center mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center text-muted-foreground">
+                        <IconComponent className="w-6 h-6" />
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-lg font-semibold mb-3">
+                      {feature.title}
+                    </h3>
+                    
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
 
         {/* Stats Section */}
