@@ -3,7 +3,9 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
   ArrowRight,
-  User,
+  Download,
+  Puzzle,
+  Key,
   Settings,
   Rocket,
   CheckCircle,
@@ -20,20 +22,34 @@ const QuickStart = () => {
       step: "01",
       title: t('quickstart.step1.title'),
       description: t('quickstart.step1.description'),
-      icon: User,
-      time: "30 сек"
+      icon: Download,
+      time: "1 мин"
     },
     {
       step: "02", 
       title: t('quickstart.step2.title'),
       description: t('quickstart.step2.description'),
-      icon: Settings,
+      icon: Puzzle,
       time: "1 мин"
     },
     {
       step: "03",
       title: t('quickstart.step3.title'),
       description: t('quickstart.step3.description'),
+      icon: Key,
+      time: "30 сек"
+    },
+    {
+      step: "04",
+      title: t('quickstart.step4.title'),
+      description: t('quickstart.step4.description'),
+      icon: Settings,
+      time: "30 сек"
+    },
+    {
+      step: "05",
+      title: t('quickstart.step5.title'),
+      description: t('quickstart.step5.description'),
       icon: Rocket,
       time: "2 мин"
     }
