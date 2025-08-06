@@ -108,8 +108,8 @@ const translations = {
     
     // Quick Start
     'quickstart.badge': 'Быстрый старт',
-    'quickstart.title': 'Начните за 3 простых шага',
-    'quickstart.description': 'От регистрации до первых результатов — меньше 5 минут',
+    'quickstart.title': 'Начните за 5 простых шагов',
+    'quickstart.description': 'До первых результатов осталось меньше 5 минут',
     'quickstart.step1.title': 'Создайте аккаунт',
     'quickstart.step1.description': 'Быстрая регистрация через GitHub или email за 30 секунд',
     'quickstart.step2.title': 'Выберите режим',
@@ -252,8 +252,8 @@ const translations = {
     
     // Quick Start
     'quickstart.badge': 'Quick Start',
-    'quickstart.title': 'Get Started in 3 Simple Steps',
-    'quickstart.description': 'From registration to first results — less than 5 minutes',
+    'quickstart.title': 'Get Started in 5 Simple Steps',
+    'quickstart.description': 'Less than 5 minutes to first results',
     'quickstart.step1.title': 'Create Account',
     'quickstart.step1.description': 'Quick registration via GitHub or email in 30 seconds',
     'quickstart.step2.title': 'Choose Mode',
