@@ -156,7 +156,7 @@ const translations = {
     'footer.newsletter.description': 'Получайте обновления о новых функциях и режимах работы',
     'footer.newsletter.placeholder': 'Ваш email',
     'footer.newsletter.subscribe': 'Подписаться',
-    'footer.copyright': '© 2024 AI IDE BAS. Все права защищены.',
+    'footer.copyright': '© 2025 AI IDE BAS. Все права защищены.',
     'footer.madeWith': 'Сделано с',
     'footer.forDevelopers': 'для разработчиков',
   },
@@ -304,7 +304,7 @@ const translations = {
     'footer.newsletter.description': 'Get updates about new features and work modes',
     'footer.newsletter.placeholder': 'Your email',
     'footer.newsletter.subscribe': 'Subscribe',
-    'footer.copyright': '© 2024 AI IDE BAS. All rights reserved.',
+    'footer.copyright': '© 2025 AI IDE BAS. All rights reserved.',
     'footer.madeWith': 'Made with',
     'footer.forDevelopers': 'for developers',
   }
