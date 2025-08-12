@@ -2,22 +2,51 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Git
+      # Установка Node.js (если нужна сборка)
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      # Шаг сборки проекта (раскомментируйте если нужно)
+      # - name: Install and Build
+      #   run: |
+      #     npm install
+      #     npm run build
+
+      - name: Configure Git
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: Create or reset gh-pages branch
+      - name: Prepare gh-pages branch
         run: |
-          if git show-ref --verify --quiet refs/heads/gh-pages; then
+          git fetch origin gh-pages || true
+          
+          if git show-ref --quiet refs/remotes/origin/gh-pages; then
             git checkout gh-pages
-            git rm -rf .
+            git reset --hard origin/gh-pages
           else
             git checkout --orphan gh-pages
+            git commit --allow-empty -m "Initial gh-pages commit"
           fi
+
+      - name: Deploy files
+        run: |
+          git rm -rf . || true
+          
+          git checkout main -- index.html
+          git checkout main -- dist/assets/
+          git checkout main -- CNAME 2>/dev/null || true
+          
+          
+          git add -A
+          git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')"
+          git push origin gh-pages --force
