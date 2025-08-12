@@ -1,0 +1,13 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          git checkout gh-pages
+          git merge main --no-ff -m "Merge main into gh-pages"
+          git push origin gh-pages
