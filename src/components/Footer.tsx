@@ -186,11 +186,6 @@ const Footer = () => {
               </div>
             </div>
             
-            <div className="flex items-center text-sm text-muted-foreground">
-              <span>{t('footer.madeWith')}</span>
-              <Heart className="w-4 h-4 mx-1 text-red-500 fill-current" />
-              <span>{t('footer.forDevelopers')}</span>
-            </div>
           </div>
         </div>
       </div>

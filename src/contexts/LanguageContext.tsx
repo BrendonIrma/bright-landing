@@ -127,7 +127,7 @@ const translations = {
     'quickstart.features.2': 'Синхронизация с командой',
     'quickstart.features.3': 'Поддержка всех языков VS Code',
     'quickstart.help.title': 'Нужна помощь с настройкой?',
-    'quickstart.help.description': 'Наша команда поможет настроить AI IDE BAS под ваши процессы разработки',
+    'quickstart.help.description': 'Вы можете связаться с нами через наши социальные сети.',
     'quickstart.help.docs': 'Посмотреть документацию',
     'quickstart.help.contact': 'Связаться с нами',
     
@@ -275,7 +275,7 @@ const translations = {
     'quickstart.features.2': 'Team synchronization',
     'quickstart.features.3': 'Support for all VS Code languages',
     'quickstart.help.title': 'Need help with setup?',
-    'quickstart.help.description': 'Our team will help configure AI IDE BAS for your development processes',
+    'quickstart.help.description': 'You can contact us through our social networks.',
     'quickstart.help.docs': 'View Documentation',
     'quickstart.help.contact': 'Contact Us',
     
