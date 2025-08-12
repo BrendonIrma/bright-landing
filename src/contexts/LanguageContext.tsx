@@ -110,6 +110,21 @@ const translations = {
     'quickstart.badge': 'Быстрый старт',
     'quickstart.title': 'Начните за 5 простых шагов',
     'quickstart.description': 'До первых результатов осталось меньше 5 минут',
+    'quickstart.stepsTab': 'Пошаговая настройка',
+    'quickstart.exampleTitle': 'Пример использования',
+    'quickstart.stepsExample': `# Подключение API ключа
+AI IDE BAS > Settings > API Key
+
+# Выбор режима работы  
+Ctrl+Shift+P -> AI IDE BAS: Select Mode
+- BA (Business Analyst)
+- Architect (Системный архитектор)
+- SA (System Administrator)
+- Reviewer (Code Reviewer)
+- Designer (UI/UX Designer)
+
+# Анализ кода
+Выделите код -> Right Click -> AI IDE BAS Review`,
     'quickstart.step1.title': 'Установите VS Code',
     'quickstart.step1.description': 'Используйте официальный сайт для загрузки и установки',
     'quickstart.step2.title': 'Установите AI IDE BAS',
@@ -258,6 +273,21 @@ const translations = {
     'quickstart.badge': 'Quick Start',
     'quickstart.title': 'Get Started in 5 Simple Steps',
     'quickstart.description': 'Less than 5 minutes to first results',
+    'quickstart.stepsTab': 'Step-by-step setup',
+    'quickstart.exampleTitle': 'Usage example',
+    'quickstart.stepsExample': `# API key connection
+AI IDE BAS > Settings > API Key
+
+# Work mode selection
+Ctrl+Shift+P -> AI IDE BAS: Select Mode
+- BA (Business Analyst)
+- Architect (System Architect)
+- SA (System Administrator)
+- Reviewer (Code Reviewer)
+- Designer (UI/UX Designer)
+
+# Code analysis
+Select code -> Right Click -> AI IDE BAS Review`,
     'quickstart.step1.title': 'Install VS Code',
     'quickstart.step1.description': 'Use the official website to download and install',
     'quickstart.step2.title': 'Install AI IDE BAS',
