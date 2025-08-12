@@ -43,7 +43,7 @@ jobs:
           git rm -rf . || true
           
           git checkout main -- index.html
-          git checkout main -- dist/assets/
+          git checkout main -- assets/ 2>/dev/null || true
           git checkout main -- CNAME 2>/dev/null || true
           
           
