@@ -1,7 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { 
   ArrowRight,
   Download,
@@ -89,185 +88,91 @@ Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
           </p>
         </div>
 
-        <Tabs defaultValue="setup" className="max-w-7xl mx-auto">
-          <TabsList className="grid w-full grid-cols-2 mb-12">
-            <TabsTrigger value="setup" className="text-base">
-              <Terminal className="w-4 h-4 mr-2" />
-              VS Code Extension Setup
-            </TabsTrigger>
-            <TabsTrigger value="steps" className="text-base">
-              <Rocket className="w-4 h-4 mr-2" />
-              {t('quickstart.stepsTab')}
-            </TabsTrigger>
-          </TabsList>
-
-          <TabsContent value="setup" className="mt-0">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* VS Code Setup Guide */}
-              <div className="animate-scale-in">
-                <Card className="relative overflow-hidden">
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <Terminal className="w-5 h-5 text-primary" />
-                        <CardTitle className="text-lg">VS Code Extension Setup</CardTitle>
-                      </div>
-                      <Button variant="ghost" size="sm">
-                        <Copy className="w-4 h-4 mr-2" />
-                        {t('quickstart.copy')}
-                      </Button>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm">
-                      <pre className="text-muted-foreground overflow-x-auto">
-                        <code>{codeExample}</code>
-                      </pre>
-                    </div>
-                    
-                    <div className="mt-6 space-y-3">
-                      {[
-                        t('quickstart.features.0'),
-                        t('quickstart.features.1'),
-                        t('quickstart.features.2'),
-                        t('quickstart.features.3')
-                      ].map((feature, index) => (
-                        <div key={index} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-
-              {/* VS Code Installation Step */}
-              <div className="space-y-6">
-                <Card className="group animate-slide-up">
+        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* Steps */}
+          <div className="space-y-6">
+            {steps.map((step, index) => {
+              const IconComponent = step.icon;
+              return (
+                <Card 
+                  key={index} 
+                  className="group animate-slide-up"
+                  style={{ animationDelay: `${index * 200}ms` }}
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
                       <div className="flex-shrink-0">
                         <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center text-white font-bold shadow-lg group-hover:shadow-glow transition-shadow duration-300">
-                          01
+                          {step.step}
                         </div>
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
                           <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
-                            {steps[0].title}
+                            {step.title}
                           </h3>
                           <Badge variant="secondary" className="text-xs">
-                            {steps[0].time}
+                            {step.time}
                           </Badge>
                         </div>
                         <p className="text-muted-foreground text-sm">
-                          {steps[0].description}
+                          {step.description}
                         </p>
                       </div>
-                      <Download className="w-5 h-5 text-primary flex-shrink-0" />
+                      <IconComponent className="w-5 h-5 text-primary flex-shrink-0" />
                     </div>
                   </CardContent>
                 </Card>
+              );
+            })}
 
-                <div className="pt-4">
-                  <Button variant="hero" size="lg" className="w-full">
-                    {t('quickstart.button')}
-                    <ArrowRight className="w-4 h-4 ml-2" />
+            <div className="pt-4">
+              <Button variant="hero" size="lg" className="w-full">
+                {t('quickstart.button')}
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
+          </div>
+
+          {/* Code Example */}
+          <div className="animate-scale-in" style={{ animationDelay: "600ms" }}>
+            <Card className="relative overflow-hidden">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center space-x-2">
+                    <Terminal className="w-5 h-5 text-primary" />
+                    <CardTitle className="text-lg">VS Code Extension Setup</CardTitle>
+                  </div>
+                  <Button variant="ghost" size="sm">
+                    <Copy className="w-4 h-4 mr-2" />
+                    {t('quickstart.copy')}
                   </Button>
                 </div>
-              </div>
-            </div>
-          </TabsContent>
-
-          <TabsContent value="steps" className="mt-0">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              {/* Steps */}
-              <div className="space-y-6">
-                {steps.slice(1).map((step, index) => {
-                  const IconComponent = step.icon;
-                  return (
-                    <Card 
-                      key={index + 1} 
-                      className="group animate-slide-up"
-                      style={{ animationDelay: `${index * 200}ms` }}
-                    >
-                      <CardContent className="p-6">
-                        <div className="flex items-start space-x-4">
-                          <div className="flex-shrink-0">
-                            <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center text-white font-bold shadow-lg group-hover:shadow-glow transition-shadow duration-300">
-                              {step.step}
-                            </div>
-                          </div>
-                          <div className="flex-1">
-                            <div className="flex items-center justify-between mb-2">
-                              <h3 className="text-lg font-semibold group-hover:text-primary transition-colors">
-                                {step.title}
-                              </h3>
-                              <Badge variant="secondary" className="text-xs">
-                                {step.time}
-                              </Badge>
-                            </div>
-                            <p className="text-muted-foreground text-sm">
-                              {step.description}
-                            </p>
-                          </div>
-                          <IconComponent className="w-5 h-5 text-primary flex-shrink-0" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-
-                <div className="pt-4">
-                  <Button variant="hero" size="lg" className="w-full">
-                    {t('quickstart.button')}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm">
+                  <pre className="text-muted-foreground overflow-x-auto">
+                    <code>{codeExample}</code>
+                  </pre>
                 </div>
-              </div>
-
-              {/* Code Example for Steps Tab */}
-              <div className="animate-scale-in" style={{ animationDelay: "600ms" }}>
-                <Card className="relative overflow-hidden">
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center space-x-2">
-                        <Rocket className="w-5 h-5 text-primary" />
-                        <CardTitle className="text-lg">{t('quickstart.exampleTitle')}</CardTitle>
-                      </div>
-                      <Button variant="ghost" size="sm">
-                        <Copy className="w-4 h-4 mr-2" />
-                        {t('quickstart.copy')}
-                      </Button>
+                
+                <div className="mt-6 space-y-3">
+                  {[
+                    t('quickstart.features.0'),
+                    t('quickstart.features.1'),
+                    t('quickstart.features.2'),
+                    t('quickstart.features.3')
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center text-sm">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="text-muted-foreground">{feature}</span>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="bg-muted/50 rounded-lg p-4 font-mono text-sm">
-                      <pre className="text-muted-foreground overflow-x-auto">
-                        <code>{t('quickstart.stepsExample')}</code>
-                      </pre>
-                    </div>
-                    
-                    <div className="mt-6 space-y-3">
-                      {[
-                        t('quickstart.features.0'),
-                        t('quickstart.features.1'),
-                        t('quickstart.features.2'),
-                        t('quickstart.features.3')
-                      ].map((feature, index) => (
-                        <div key={index} className="flex items-center text-sm">
-                          <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />
-                          <span className="text-muted-foreground">{feature}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </TabsContent>
-        </Tabs>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
