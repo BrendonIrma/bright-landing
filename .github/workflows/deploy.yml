@@ -9,15 +9,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: Install and Build
+      # Установка Node.js и сборка проекта
+      - name: Setup Node and Build
         run: |
           npm install
           npm run build
+          
+          # Проверяем что собралось
+          echo "Содержимое dist/:"
+          ls -la dist/
 
       - name: Configure Git
         run: |
@@ -27,7 +27,6 @@ jobs:
       - name: Prepare gh-pages branch
         run: |
           git fetch origin gh-pages || true
-          
           if git show-ref --quiet refs/remotes/origin/gh-pages; then
             git checkout gh-pages
             git reset --hard origin/gh-pages
@@ -36,35 +35,26 @@ jobs:
             git commit --allow-empty -m "Initial gh-pages commit"
           fi
 
-      - name: Create backup
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git tag deploy-$(date '+%Y-%m-%d-%H%M')
-          git push origin --tags
-          
-          zip -r backup-$(date '+%Y%m%d-%H%M%S').zip .
-          
-          if ! gh release view backup-latest; then
-            gh release create backup-latest --title "Latest Backup" --generate-notes
-          fi
-          
-          gh release upload backup-latest backup-*.zip || echo "Upload failed, continuing..."
-
       - name: Deploy files
         run: |
+          # Полная очистка ветки
           git rm -rf . || true
-
-          git checkout main -- index.html
+          
+          # Копируем ВСЁ содержимое папки dist
+          cp -a dist/. .
+          
+          # Копируем CNAME отдельно (если существует)
           git checkout main -- CNAME 2>/dev/null || true
-
-          git checkout main -- dist/assets/
-          mkdir -p assets
-          cp -r dist/assets/* assets/
-          rm -rf dist/
-
+          
+          # Для SPA приложений
           echo "/* /index.html 200" > _redirects
-
+          
+          # Проверяем наличие обязательных файлов
+          if [ ! -f "index.html" ]; then
+            echo "ERROR: index.html not found in dist/"
+            exit 1
+          fi
+          
           git add -A
           git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')"
           git push origin gh-pages --force
