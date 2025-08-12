@@ -9,17 +9,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      # Установка Node.js (если нужна сборка)
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
           node-version: 20
 
-      # Шаг сборки проекта (раскомментируйте если нужно)
-      # - name: Install and Build
-      #   run: |
-      #     npm install
-      #     npm run build
+      - name: Install and Build
+        run: |
+          npm install
+          npm run build
 
       - name: Configure Git
         run: |
@@ -38,15 +36,35 @@ jobs:
             git commit --allow-empty -m "Initial gh-pages commit"
           fi
 
+      - name: Create backup
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git tag deploy-$(date '+%Y-%m-%d-%H%M')
+          git push origin --tags
+          
+          zip -r backup-$(date '+%Y%m%d-%H%M%S').zip .
+          
+          if ! gh release view backup-latest; then
+            gh release create backup-latest --title "Latest Backup" --generate-notes
+          fi
+          
+          gh release upload backup-latest backup-*.zip || echo "Upload failed, continuing..."
+
       - name: Deploy files
         run: |
           git rm -rf . || true
-          
+
           git checkout main -- index.html
-          git checkout main -- assets/ 2>/dev/null || true
           git checkout main -- CNAME 2>/dev/null || true
-          
-          
+
+          git checkout main -- dist/assets/
+          mkdir -p assets
+          cp -r dist/assets/* assets/
+          rm -rf dist/
+
+          echo "/* /index.html 200" > _redirects
+
           git add -A
           git commit -m "Deploy: $(date '+%Y-%m-%d %H:%M:%S')"
           git push origin gh-pages --force
