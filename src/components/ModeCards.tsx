@@ -1,10 +1,8 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
   ArrowRight,
-  Code,
-  Users
+  Code
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -22,18 +20,7 @@ const ModeCards = () => {
       <div className="absolute bottom-40 right-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-16 animate-fade-in">
-          <Badge variant="outline" className="mb-4">
-            <Users className="w-4 h-4 mr-2" />
-            {t('modes.badge')}
-          </Badge>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            {t('modes.title')}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            {t('modes.description')}
-          </p>
-        </div>
+
 
 
 

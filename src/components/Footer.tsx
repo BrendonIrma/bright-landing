@@ -15,7 +15,7 @@ const Footer = () => {
   const navigation = {
     product: [
       { name: t('footer.product.features'), href: "#features" },
-      { name: t('footer.product.modes'), href: "#modes" },
+      { name: t('footer.product.modes'), href: "#hero" },
       { name: t('footer.product.integrations'), href: "#integrations" },
       { name: t('footer.product.pricing'), href: "#pricing" },
     ],
