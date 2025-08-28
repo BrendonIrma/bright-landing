@@ -24,7 +24,7 @@ const translations = {
     
     // Hero
     'hero.badge': 'Революция в аналитике',
-    'hero.title': 'ИИ для аналитиков\nи архитекторов',
+    'hero.title': 'ИИ для аналитиков\nи архитекторов решений',
     'hero.description': 'Не пишите документацию вручную — AIIDE BAS сделает это за вас',
     'hero.startFree': 'Установить AI IDE BAS',
     'hero.watchDemo': 'Посмотреть демо',
