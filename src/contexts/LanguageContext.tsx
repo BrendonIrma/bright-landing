@@ -24,7 +24,7 @@ const translations = {
     
     // Hero
     'hero.badge': 'Революция в аналитике',
-    'hero.title': 'Умное расширение\nдля VS Code',
+    'hero.title': 'AI-инструмент для аналитиков\nи архитекторов ИТ-решений',
     'hero.description': 'В AI IDE BAS встроены специализированные режимы работы: Business Analyst, Architect, System Analyst, Code Reviewer и Designer. Один инструмент для всего цикла разработки требований прямо в VS Code.',
     'hero.startFree': 'Установить AI IDE BAS',
     'hero.watchDemo': 'Посмотреть демо',
