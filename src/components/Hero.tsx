@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Play, Sparkles, Zap, Brain, Code2 } from "lucide-react";
+import { ArrowRight, Play, Sparkles, Zap, Brain, Code2, Settings } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
@@ -39,6 +39,34 @@ VSCode -> VSCode: Устанавливает расширение
 VSCode -> Пользователь: Дает суперсилу
 @enduml`,
       icon: Brain,
+    },
+    architect: {
+      title: t('hero.mode.architect.title'),
+      description: t('hero.mode.architect.description'),
+      code: `@startuml
+title Архитектура системы
+
+package "Frontend" {
+  [React App]
+  [UI Components]
+}
+
+package "Backend" {
+  [API Gateway]
+  [User Service]
+  [Data Service]
+}
+
+database "Database" {
+  [PostgreSQL]
+}
+
+[React App] --> [API Gateway]
+[API Gateway] --> [User Service]
+[API Gateway] --> [Data Service]
+[User Service] --> [PostgreSQL]
+[Data Service] --> [PostgreSQL]`,
+      icon: Settings,
     },
     reviewer: {
       title: t('hero.mode.reviewer.title'),

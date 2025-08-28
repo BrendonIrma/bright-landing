@@ -2,12 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { 
-  Brain, 
-  Sparkles, 
-  Settings, 
-  Shield, 
   ArrowRight,
-  Lightbulb,
   Code,
   Users
 } from "lucide-react";
@@ -16,69 +11,8 @@ import { useLanguage } from "@/contexts/LanguageContext";
 const ModeCards = () => {
   const { t } = useLanguage();
   
-  const modes = [
-    {
-      id: "ba",
-      title: t('modes.ba.title'),
-      shortTitle: "BA",
-      description: t('modes.ba.description'),
-      features: [
-        t('modes.ba.features.0'),
-        t('modes.ba.features.1'), 
-        t('modes.ba.features.2'),
-        t('modes.ba.features.3')
-      ],
-      icon: Lightbulb,
-      color: "from-blue-500 to-cyan-500",
-      bgGlow: "bg-blue-500/10",
-    },
-    {
-      id: "sa",
-      title: t('modes.sa.title'),
-      shortTitle: "SA",
-      description: t('modes.sa.description'),
-      features: [
-        t('modes.sa.features.0'),
-        t('modes.sa.features.1'),
-        t('modes.sa.features.2'),
-        t('modes.sa.features.3')
-      ],
-      icon: Settings,
-      color: "from-green-500 to-emerald-500",
-      bgGlow: "bg-green-500/10",
-    },
-    {
-      id: "architect",
-      title: t('modes.architect.title'),
-      shortTitle: "Architect",
-      description: t('modes.architect.description'),
-      features: [
-        t('modes.architect.features.0'),
-        t('modes.architect.features.1'),
-        t('modes.architect.features.2'),
-        t('modes.architect.features.3')
-      ],
-      icon: Brain,
-      color: "from-purple-500 to-indigo-500",
-      bgGlow: "bg-purple-500/10",
-    },
-    {
-      id: "reviewer",
-      title: t('modes.reviewer.title'),
-      shortTitle: "Reviewer",
-      description: t('modes.reviewer.description'),
-      features: [
-        t('modes.reviewer.features.0'),
-        t('modes.reviewer.features.1'),
-        t('modes.reviewer.features.2'),
-        t('modes.reviewer.features.3')
-      ],
-      icon: Shield,
-      color: "from-red-500 to-orange-500",
-      bgGlow: "bg-red-500/10",
-    },
 
-  ];
+
 
   return (
     <section id="modes" className="py-20 relative overflow-hidden">
@@ -101,51 +35,7 @@ const ModeCards = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {modes.map((mode, index) => {
-            const IconComponent = mode.icon;
-            return (
-              <Card 
-                key={mode.id} 
-                className="group relative overflow-hidden animate-scale-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                {/* Glow effect */}
-                <div className={`absolute inset-0 ${mode.bgGlow} opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-xl`} />
-                
-                <CardHeader className="relative z-10">
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${mode.color} flex items-center justify-center text-white shadow-lg`}>
-                      <IconComponent className="w-6 h-6" />
-                    </div>
-                    <Badge variant="secondary" className="text-xs">
-                      {mode.shortTitle}
-                    </Badge>
-                  </div>
-                  <CardTitle className="text-xl font-semibold group-hover:text-primary transition-colors">
-                    {mode.title}
-                  </CardTitle>
-                </CardHeader>
 
-                <CardContent className="relative z-10">
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {mode.description}
-                  </p>
-
-                  <div className="space-y-2 mb-6">
-                    {mode.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
-                        <span className="text-muted-foreground">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
 
         {/* CTA Section */}
         <div className="text-center mt-16">
