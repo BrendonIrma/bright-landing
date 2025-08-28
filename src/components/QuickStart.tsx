@@ -127,9 +127,16 @@ Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
             })}
 
             <div className="pt-4">
-              <Button variant="hero" size="lg" className="w-full">
-                {t('quickstart.button')}
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <Button 
+                variant="hero" 
+                size="lg" 
+                className="w-full"
+                asChild
+              >
+                <a href="https://marketplace.visualstudio.com/items?itemName=8eton.ai-ide-bas" target="_blank" rel="noopener noreferrer">
+                  {t('quickstart.button')}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
               </Button>
             </div>
           </div>

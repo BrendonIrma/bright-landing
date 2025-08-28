@@ -82,9 +82,16 @@ VSCode -> Пользователь: Дает суперсилу
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button variant="hero" size="hero" className="animate-scale-in">
-              {t('hero.startFree')}
-              <ArrowRight className="w-5 h-5 ml-2" />
+            <Button 
+              variant="hero" 
+              size="hero" 
+              className="animate-scale-in"
+              asChild
+            >
+              <a href="https://marketplace.visualstudio.com/items?itemName=8eton.ai-ide-bas" target="_blank" rel="noopener noreferrer">
+                {t('hero.startFree')}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </a>
             </Button>
             <Button 
               variant="glass" 
