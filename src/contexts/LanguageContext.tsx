@@ -25,7 +25,7 @@ const translations = {
     // Hero
     'hero.badge': 'Революция в аналитике',
     'hero.title': 'ИИ для аналитиков\nи архитекторов решений',
-    'hero.description': 'Не пишите документацию вручную — AIIDE BAS сделает это за вас',
+    'hero.description': 'Не пишите документацию вручную — AI IDE BAS сделает это за вас',
     'hero.startFree': 'Установить AI IDE BAS',
     'hero.watchDemo': 'Посмотреть демо',
     'hero.tryModes': 'Попробуйте разные режимы',
@@ -71,7 +71,7 @@ const translations = {
     'modes.reviewer.features.2': 'Проверка кибербезопасности',
     'modes.reviewer.features.3': 'Проверка инженера поддержки',
     'modes.cta.title': 'Готовы попробовать все режимы?',
-    'modes.cta.description': 'Скачайте расширение AI IDE BAS и получите доступ ко всем режимам работ',
+    'modes.cta.description': 'Скачайте расширение AI IDE BAS и получите доступ ко всем режимам работ, таким как прототипирование интерфейсов и декомпозицию требований на задачи',
     'modes.cta.button': 'Установить AI IDE BAS',
     
     // Features
