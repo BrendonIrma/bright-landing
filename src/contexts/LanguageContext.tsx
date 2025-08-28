@@ -326,8 +326,24 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
     return browserLang.startsWith('ru') ? 'ru' : 'en';
   });
 
+  // Инициализируем заголовок страницы при первой загрузке
+  useEffect(() => {
+    if (language === 'ru') {
+      document.title = 'AI IDE BAS - Умное расширение для VS Code';
+    } else {
+      document.title = 'AI IDE BAS - Smart Extension for VS Code';
+    }
+  }, []); // Пустой массив зависимостей - выполняется только при монтировании
+
   useEffect(() => {
     localStorage.setItem('language', language);
+    
+    // Обновляем заголовок страницы в зависимости от языка
+    if (language === 'ru') {
+      document.title = 'AI IDE BAS - Умное расширение для VS Code';
+    } else {
+      document.title = 'AI IDE BAS - Smart Extension for VS Code';
+    }
   }, [language]);
 
   const t = (key: string): string => {
