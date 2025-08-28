@@ -1,73 +1,77 @@
-# Welcome to your Lovable project
+# AI IDE BAS - Умное расширение для VS Code
 
-## Project info
+## Описание проекта
 
-**URL**: https://lovable.dev/projects/d0a1507d-ee2f-4930-82a1-1701890aec1d
+AI IDE BAS - это революционное AI-расширение для VS Code, которое предоставляет интеллектуальную помощь в разработке с помощью различных режимов работы:
 
-## How can I edit this code?
+- **BA (Business Analyst)** - помощь в написании пользовательских историй и требований
+- **SA (Solution Architect)** - проектирование архитектуры и диаграмм
+- **Reviewer** - анализ и проверка кода и документации
+- **Designer** - создание UI/UX решений
 
-There are several ways of editing your application.
+## Технологии
 
-**Use Lovable**
+Этот проект построен с использованием:
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/d0a1507d-ee2f-4930-82a1-1701890aec1d) and start prompting.
+- **Vite** - быстрый сборщик проектов
+- **TypeScript** - типизированный JavaScript
+- **React** - библиотека для создания пользовательских интерфейсов
+- **shadcn/ui** - компоненты пользовательского интерфейса
+- **Tailwind CSS** - utility-first CSS фреймворк
 
-Changes made via Lovable will be committed automatically to this repo.
+## Установка и запуск
 
-**Use your preferred IDE**
+### Требования
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- Node.js (рекомендуется версия 18+)
+- npm или yarn
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+### Локальная разработка
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Клонирование репозитория
+git clone <URL_РЕПОЗИТОРИЯ>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Переход в директорию проекта
+cd bright-landing
 
-# Step 3: Install the necessary dependencies.
-npm i
+# Установка зависимостей
+npm install
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Запуск сервера разработки
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Доступные команды
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `npm run dev` - запуск сервера разработки
+- `npm run build` - сборка проекта для продакшена
+- `npm run build:dev` - сборка в режиме разработки
+- `npm run preview` - предварительный просмотр собранного проекта
+- `npm run lint` - проверка кода с помощью ESLint
 
-**Use GitHub Codespaces**
+## Структура проекта
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── components/     # React компоненты
+├── contexts/       # React контексты
+├── hooks/          # Пользовательские хуки
+├── lib/            # Утилиты и библиотеки
+├── pages/          # Страницы приложения
+└── main.tsx        # Точка входа
+```
 
-## What technologies are used for this project?
+## Развертывание
 
-This project is built with:
+Для развертывания проекта выполните:
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+```sh
+npm run build
+```
 
-## How can I deploy this project?
+Собранные файлы будут находиться в директории `dist/`.
 
-Simply open [Lovable](https://lovable.dev/projects/d0a1507d-ee2f-4930-82a1-1701890aec1d) and click on Share -> Publish.
+## Лицензия
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Этот проект является приватным и предназначен для внутреннего использования.
