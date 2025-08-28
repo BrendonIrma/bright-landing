@@ -19,9 +19,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-primary rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">AI</span>
-            </div>
+            <img 
+              src="/логоAIFirstIDEBAS .png" 
+              alt="AI IDE BAS Logo" 
+              className="w-8 h-8 object-contain"
+            />
             <span className="text-xl font-bold bg-gradient-hero bg-clip-text text-transparent">
               AI IDE BAS
             </span>
