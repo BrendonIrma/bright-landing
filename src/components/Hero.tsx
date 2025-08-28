@@ -86,7 +86,12 @@ VSCode -> Пользователь: Дает суперсилу
               {t('hero.startFree')}
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
-            <Button variant="glass" size="hero" className="animate-scale-in">
+            <Button 
+              variant="glass" 
+              size="hero" 
+              className="animate-scale-in"
+              onClick={() => window.open('https://vkvideo.ru/video-231325948_456239030', '_blank')}
+            >
               <Play className="w-5 h-5 mr-2" />
               {t('hero.watchDemo')}
             </Button>
