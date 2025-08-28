@@ -6,7 +6,6 @@ import {
   Sparkles, 
   Settings, 
   Shield, 
-  Palette, 
   ArrowRight,
   Lightbulb,
   Code,
@@ -78,21 +77,7 @@ const ModeCards = () => {
       color: "from-red-500 to-orange-500",
       bgGlow: "bg-red-500/10",
     },
-    {
-      id: "designer",
-      title: t('modes.designer.title'),
-      shortTitle: "Designer",
-      description: t('modes.designer.description'),
-      features: [
-        t('modes.designer.features.0'),
-        t('modes.designer.features.1'),
-        t('modes.designer.features.2'),
-        t('modes.designer.features.3')
-      ],
-      icon: Palette,
-      color: "from-pink-500 to-rose-500",
-      bgGlow: "bg-pink-500/10",
-    },
+
   ];
 
   return (

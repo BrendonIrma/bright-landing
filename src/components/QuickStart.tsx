@@ -63,7 +63,7 @@ const QuickStart = () => {
 
 # Быстрый старт
 Ctrl+Shift+P -> AI IDE BAS: Start
-Выберите режим: BA | Architect | SA | Reviewer | Designer
+Выберите режим: BA | Architect | SA | Reviewer
 
 # Анализ текущего файла
 Ctrl+Shift+P -> AI IDE BAS: Review Current File`;
