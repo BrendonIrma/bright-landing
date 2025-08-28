@@ -8,11 +8,9 @@ const Header = () => {
   const { t, language, setLanguage } = useLanguage();
 
   const navigation = [
-    { name: t('header.features'), href: "#features" },
     { name: t('header.modes'), href: "#modes" },
+    { name: t('header.features'), href: "#features" },
     { name: t('header.quickstart'), href: "#quickstart" },
-    { name: t('header.integrations'), href: "#integrations" },
-    { name: t('header.community'), href: "#community" },
   ];
 
   return (
@@ -56,9 +54,15 @@ const Header = () => {
               <Github className="w-4 h-4 mr-2" />
               {t('header.github')}
             </Button>
-            <Button variant="hero" size="sm">
-              {t('header.tryNow')}
-              <ArrowUpRight className="w-4 h-4 ml-1" />
+            <Button 
+              variant="hero" 
+              size="sm"
+              asChild
+            >
+              <a href="https://marketplace.visualstudio.com/items?itemName=8eton.ai-ide-bas" target="_blank" rel="noopener noreferrer">
+                {t('header.tryNow')}
+                <ArrowUpRight className="w-4 h-4 ml-1" />
+              </a>
             </Button>
           </div>
 
@@ -102,9 +106,16 @@ const Header = () => {
                   <Github className="w-4 h-4 mr-2" />
                   {t('header.github')}
                 </Button>
-                <Button variant="hero" size="sm" className="w-full">
-                  {t('header.tryNow')}
-                  <ArrowUpRight className="w-4 h-4 ml-1" />
+                <Button 
+                  variant="hero" 
+                  size="sm" 
+                  className="w-full"
+                  asChild
+                >
+                  <a href="https://marketplace.visualstudio.com/items?itemName=8eton.ai-ide-bas" target="_blank" rel="noopener noreferrer">
+                    {t('header.tryNow')}
+                    <ArrowUpRight className="w-4 h-4 ml-1" />
+                  </a>
                 </Button>
               </div>
             </div>
