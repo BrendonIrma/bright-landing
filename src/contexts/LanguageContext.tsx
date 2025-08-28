@@ -25,7 +25,7 @@ const translations = {
     // Hero
     'hero.badge': 'Революция в аналитике',
     'hero.title': 'AI-инструмент для аналитиков\nи архитекторов ИТ-решений',
-    'hero.description': 'Интегрированная среда разработки с искусственным интеллектом для системных и бизнес аналитиков, архитекторов — AI IDE BAS (Artificial Intelligence in Integrated Development Environment for Business Analyst, Architect, System Analyst)',
+    'hero.description': 'Интегрированная среда разработки с искусственным интеллектом для системных и бизнес аналитиков, архитекторов — AI IDE BAS (Artificial Intelligence in Integrated Development Environment for Business Analyst, Architect, System Analyst). Один инструмент для всего цикла разработки требований прямо в VS Code.',
     'hero.startFree': 'Установить AI IDE BAS',
     'hero.watchDemo': 'Посмотреть демо',
     'hero.tryModes': 'Попробуйте разные режимы',
