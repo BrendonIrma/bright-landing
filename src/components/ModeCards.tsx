@@ -35,9 +35,15 @@ const ModeCards = () => {
               <p className="text-muted-foreground mb-6">
                 {t('modes.cta.description')}
               </p>
-              <Button variant="hero" size="lg">
-                {t('modes.cta.button')}
-                <ArrowRight className="w-4 h-4 ml-2" />
+              <Button 
+                variant="hero" 
+                size="lg"
+                asChild
+              >
+                <a href="https://marketplace.visualstudio.com/items?itemName=8eton.ai-ide-bas" target="_blank" rel="noopener noreferrer">
+                  {t('modes.cta.button')}
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </a>
               </Button>
             </CardContent>
           </Card>
