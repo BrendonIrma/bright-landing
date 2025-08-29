@@ -105,8 +105,7 @@ const translations = {
     
     // Quick Start
     'quickstart.badge': 'Быстрый старт',
-    'quickstart.title': 'Начните за 5 простых шагов',
-    'quickstart.description': 'До первых результатов осталось меньше 5 минут',
+    'quickstart.title': 'Как начать?',
     'quickstart.step1.title': 'Установите VS Code',
     'quickstart.step1.description': 'Используйте официальный сайт для загрузки и установки',
     'quickstart.step2.title': 'Установите AI IDE BAS',
@@ -127,6 +126,8 @@ const translations = {
     'quickstart.help.description': 'Вы можете связаться с нами через наши социальные сети.',
     'quickstart.help.docs': 'Посмотреть документацию',
     'quickstart.help.contact': 'Связаться с нами',
+    'quickstart.video.button': 'Видеоинструкция',
+    'quickstart.text.button': 'Текстовая инструкция',
     
     // Footer
     'footer.description': 'Революционный AI-инструмент для команд разработки. Пять экспертных режимов в одной платформе для ускорения всего цикла разработки.',
@@ -250,8 +251,7 @@ const translations = {
     
     // Quick Start
     'quickstart.badge': 'Quick Start',
-    'quickstart.title': 'Get Started in 5 Simple Steps',
-    'quickstart.description': 'Less than 5 minutes to first results',
+    'quickstart.title': 'How to Start?',
     'quickstart.step1.title': 'Install VS Code',
     'quickstart.step1.description': 'Use the official website to download and install',
     'quickstart.step2.title': 'Install AI IDE BAS',
@@ -272,6 +272,8 @@ const translations = {
     'quickstart.help.description': 'You can contact us through our social networks.',
     'quickstart.help.docs': 'View Documentation',
     'quickstart.help.contact': 'Contact Us',
+    'quickstart.video.button': 'Video Tutorial',
+    'quickstart.text.button': 'Text Tutorial',
     
     // Footer
     'footer.description': 'Revolutionary AI tool for development teams. Five expert modes in one platform to accelerate the entire development cycle.',
