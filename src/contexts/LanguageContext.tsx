@@ -170,8 +170,8 @@ const translations = {
     
     // Hero
     'hero.badge': 'Analytics Revolution',
-    'hero.title': 'Smart Extension\nfor VS Code',
-    'hero.description': 'AI IDE BAS includes specialized work modes: Business Analyst, Architect, System Analyst, and Code Reviewer. One tool for the entire requirements development cycle right in VS Code.',
+    'hero.title': 'AI for Analysts\nand Solution Architects',
+    'hero.description': 'Don\'t write documentation manually — AI IDE BAS will do it for you',
     'hero.startFree': 'Install AI IDE BAS',
     'hero.watchDemo': 'Watch Demo',
     'hero.tryModes': 'Try Different Modes',
