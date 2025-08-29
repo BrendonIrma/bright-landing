@@ -77,7 +77,7 @@ const translations = {
     // Features
     'features.badge': 'Возможности платформы',
     'features.title': 'Почему выбирают AI IDE BAS',
-    'features.description': 'Современные AI технологии для автоматизации документирования, визуализации требований и упрощения рутинных процессов прямо в VS Code.',
+    'features.description': 'Современные AI технологии для автоматизации документирования, визуализации требований и упрощения рутинных процессов прямо в VS Code / Windsurf AI/ Cursor IDE',
     'features.ai.title': 'Выбор любой LLM',
     'features.ai.description': 'Интеграция с LLM по вашему API-ключу',
     'features.speed.title': 'Экономия времени',
@@ -222,7 +222,7 @@ const translations = {
     // Features
     'features.badge': 'Platform Features',
     'features.title': 'Why Choose AI IDE BAS',
-    'features.description': 'Modern AI technologies for automating documentation, visualizing requirements and simplifying routine processes right in VS Code.',
+    'features.description': 'Modern AI technologies for automating documentation, visualizing requirements and simplifying routine processes right in VS Code / Windsurf AI/ Cursor IDE',
     'features.ai.title': 'Any LLM Choice',
     'features.ai.description': 'Integration with LLM via your API key',
     'features.speed.title': 'Time Savings',

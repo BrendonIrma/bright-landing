@@ -2,14 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
   Zap, 
-  Cpu, 
   Bot,
-  ClipboardCheck,
   FileText,
   Settings,
   GitBranch,
-  Puzzle,
-  Clock
+  Puzzle
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -28,16 +25,6 @@ const Features = () => {
       description: t('features.speed.description')
     },
     {
-      icon: Cpu,
-      title: t('features.integration.title'),
-      description: t('features.integration.description')
-    },
-    {
-      icon: ClipboardCheck,
-      title: t('features.validation.title'),
-      description: t('features.validation.description')
-    },
-    {
       icon: FileText,
       title: t('features.templates.title'),
       description: t('features.templates.description')
@@ -46,10 +33,7 @@ const Features = () => {
       icon: Settings,
       title: t('features.customization.title'),
       description: t('features.customization.description')
-    }
-  ];
-
-  const inDevFeatures = [
+    },
     {
       icon: Puzzle,
       title: t('features.team.title'),
@@ -59,13 +43,10 @@ const Features = () => {
       icon: GitBranch,
       title: t('features.versioning.title'),
       description: t('features.versioning.description')
-    },
-    {
-      icon: Settings,
-      title: t('features.customization.title'),
-      description: t('features.customization.description')
     }
   ];
+
+
 
   return (
     <section id="features" className="py-20 relative overflow-hidden">
@@ -113,50 +94,6 @@ const Features = () => {
               </Card>
             );
           })}
-        </div>
-
-        {/* In Development Section */}
-        <div className="mt-20">
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4">
-              <Clock className="w-4 h-4 mr-2" />
-              {t('features.indev.badge')}
-            </Badge>
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              {t('features.indev.title')}
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              {t('features.indev.description')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {inDevFeatures.map((feature, index) => {
-              const IconComponent = feature.icon;
-              return (
-                <Card 
-                  key={index} 
-                  className="group relative overflow-hidden opacity-75 hover:opacity-100 transition-opacity duration-300"
-                >
-                  <CardContent className="p-6 relative z-10">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center text-muted-foreground">
-                        <IconComponent className="w-6 h-6" />
-                      </div>
-                    </div>
-                    
-                    <h3 className="text-lg font-semibold mb-3">
-                      {feature.title}
-                    </h3>
-                    
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
