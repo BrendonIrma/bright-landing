@@ -15,7 +15,7 @@ const Footer = () => {
   const socialLinks = [
     { name: "GitHub", icon: Github, href: "https://github.com/dradns/AI-IDE-BAS" },
     { name: "Telegram", icon: Send, href: "https://t.me/AI_IDE_BAS" },
-    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/channel/UC5OIZ9y0DScRQ3qGxfg1w?ysclid=mf10fagtyd602830080" },
+    { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/@ai_ide_bas" },
   ];
 
   return (
