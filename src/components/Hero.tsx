@@ -175,22 +175,43 @@ title Диаграмма Ганта - Проект AI IDE BAS
         <div className="max-w-6xl mx-auto animate-slide-up">
           <div className="text-center mb-8">
             <h3 className="text-2xl font-semibold mb-4">{t('hero.tryModes')}</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {Object.entries(demoModes).map(([key, mode]) => {
-                const IconComponent = mode.icon;
-                return (
-                  <Button
-                    key={key}
-                    variant={activeDemo === key ? "default" : "glass"}
-                    size="sm"
-                    onClick={() => setActiveDemo(key)}
-                    className="transition-all duration-300 whitespace-nowrap"
-                  >
-                    <IconComponent className="w-4 h-4 mr-2" />
-                    {mode.title}
-                  </Button>
-                );
-              })}
+            <div className="flex flex-col gap-3">
+              {/* Первая строка - первые 3 режима */}
+              <div className="flex justify-center gap-3">
+                {Object.entries(demoModes).slice(0, 3).map(([key, mode]) => {
+                  const IconComponent = mode.icon;
+                  return (
+                    <Button
+                      key={key}
+                      variant={activeDemo === key ? "default" : "glass"}
+                      size="sm"
+                      onClick={() => setActiveDemo(key)}
+                      className="transition-all duration-300 whitespace-nowrap"
+                    >
+                      <IconComponent className="w-4 h-4 mr-2" />
+                      {mode.title}
+                    </Button>
+                  );
+                })}
+              </div>
+              {/* Вторая строка - последние 3 режима */}
+              <div className="flex justify-center gap-3">
+                {Object.entries(demoModes).slice(3).map(([key, mode]) => {
+                  const IconComponent = mode.icon;
+                  return (
+                    <Button
+                      key={key}
+                      variant={activeDemo === key ? "default" : "glass"}
+                      size="sm"
+                      onClick={() => setActiveDemo(key)}
+                      className="transition-all duration-300 whitespace-nowrap"
+                    >
+                      <IconComponent className="w-4 h-4 mr-2" />
+                      {mode.title}
+                    </Button>
+                  );
+                })}
+              </div>
             </div>
           </div>
 
