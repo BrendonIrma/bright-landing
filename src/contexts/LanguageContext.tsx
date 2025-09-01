@@ -161,6 +161,7 @@ const translations = {
     'footer.copyright': '© 2025 AI IDE BAS. Все права защищены.',
     'footer.madeWith': 'Сделано с',
     'footer.forDevelopers': 'для разработчиков',
+    'footer.community': 'Сообщество',
   },
   en: {
     // Header
@@ -311,6 +312,7 @@ const translations = {
     'footer.copyright': '© 2025 AI IDE BAS. All rights reserved.',
     'footer.madeWith': 'Made with',
     'footer.forDevelopers': 'for developers',
+    'footer.community': 'Community',
   }
 };
 

@@ -6,7 +6,6 @@ import {
   Youtube
 } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import VkIcon from "@/components/icons/VkIcon";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -16,7 +15,6 @@ const Footer = () => {
   const socialLinks = [
     { name: "GitHub", icon: Github, href: "https://github.com/dradns/AI-IDE-BAS" },
     { name: "Telegram", icon: Send, href: "https://t.me/AI_IDE_BAS" },
-    { name: "VK", icon: VkIcon, href: "https://vk.com/ai_ide_bas" },
     { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/channel/UC5OIZ9y0DScRQ3qGxfg1w?ysclid=mf10fagtyd602830080" },
   ];
 
@@ -49,7 +47,7 @@ const Footer = () => {
 
             {/* Community - справа */}
             <div className="space-y-6">
-              <h3 className="text-lg font-semibold">Сообщество</h3>
+              <h3 className="text-lg font-semibold">{t('footer.community')}</h3>
               <div className="flex items-center space-x-4">
                 {socialLinks.map((social) => {
                   const IconComponent = social.icon;

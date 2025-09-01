@@ -11,7 +11,7 @@ const Header = () => {
     { name: t('header.modes'), href: "#hero" },
     { name: t('header.features'), href: "#features" },
     { name: t('header.quickstart'), href: "#quickstart" },
-    { name: "Сообщество", href: "#footer" },
+    { name: t('header.community'), href: "#footer" },
   ];
 
   return (
