@@ -40,7 +40,7 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { name: "GitHub", icon: Github, href: "#" },
+    { name: "GitHub", icon: Github, href: "https://github.com/dradns/AI-IDE-BAS" },
     { name: "Twitter", icon: Twitter, href: "#" },
     { name: "LinkedIn", icon: Linkedin, href: "#" },
     { name: "Email", icon: Mail, href: "mailto:hello@devmode.ai" },

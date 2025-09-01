@@ -52,9 +52,11 @@ const Header = () => {
               <Globe className="w-4 h-4 mr-2" />
               {language === 'ru' ? 'EN' : 'RU'}
             </Button>
-            <Button variant="ghost" size="sm">
-              <Github className="w-4 h-4 mr-2" />
-              {t('header.github')}
+            <Button variant="ghost" size="sm" asChild>
+              <a href="https://github.com/dradns/AI-IDE-BAS" target="_blank" rel="noopener noreferrer">
+                <Github className="w-4 h-4 mr-2" />
+                {t('header.github')}
+              </a>
             </Button>
             <Button 
               variant="hero" 
@@ -104,9 +106,11 @@ const Header = () => {
                   <Globe className="w-4 h-4 mr-2" />
                   {language === 'ru' ? 'EN' : 'RU'}
                 </Button>
-                <Button variant="ghost" size="sm" className="w-full justify-start">
-                  <Github className="w-4 h-4 mr-2" />
-                  {t('header.github')}
+                <Button variant="ghost" size="sm" className="w-full justify-start" asChild>
+                  <a href="https://github.com/dradns/AI-IDE-BAS" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    {t('header.github')}
+                  </a>
                 </Button>
                 <Button 
                   variant="hero" 
