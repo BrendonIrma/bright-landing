@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ArrowUpRight, Globe, Users } from "lucide-react";
+import { Menu, X, ArrowUpRight, Globe } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
@@ -11,6 +11,7 @@ const Header = () => {
     { name: t('header.modes'), href: "#hero" },
     { name: t('header.features'), href: "#features" },
     { name: t('header.quickstart'), href: "#quickstart" },
+    { name: "Сообщество", href: "#footer" },
   ];
 
   return (
@@ -51,16 +52,6 @@ const Header = () => {
             >
               <Globe className="w-4 h-4 mr-2" />
               {language === 'ru' ? 'EN' : 'RU'}
-            </Button>
-            <Button 
-              variant="ghost" 
-              size="sm"
-              asChild
-            >
-              <a href="#footer" className="scroll-smooth">
-                <Users className="w-4 h-4 mr-2" />
-                Сообщество
-              </a>
             </Button>
             <Button 
               variant="hero" 
