@@ -36,7 +36,7 @@ const QuickStart = () => {
               className="w-full h-20 text-lg"
               asChild
             >
-              <a href="https://vkvideo.ru/video-231325948_456239030" target="_blank" rel="noopener noreferrer">
+              <a href="https://vkvideo.ru/video-231325948_456239056?t=9m57s" target="_blank" rel="noopener noreferrer">
                 {t('quickstart.video.button')}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
