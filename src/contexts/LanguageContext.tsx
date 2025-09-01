@@ -134,7 +134,7 @@ const translations = {
     'quickstart.text.button': 'Текстовая инструкция',
     
     // Footer
-    'footer.description': 'Революционный AI-инструмент для команд разработки. Пять экспертных режимов в одной платформе для ускорения цикла написания документации.',
+    'footer.description': 'Революционный AI-инструмент для аналитиков и архитекторов решений. 6 экспертных режимов.',
     'footer.product': 'Продукт',
     'footer.support': 'Поддержка',
     'footer.company': 'Компания',
@@ -285,7 +285,7 @@ const translations = {
     'quickstart.text.button': 'Text Tutorial',
     
     // Footer
-    'footer.description': 'Revolutionary AI tool for development teams. Five expert modes in one platform to accelerate the documentation writing cycle.',
+    'footer.description': 'Revolutionary AI tool for analysts and solution architects. 6 expert modes.',
     'footer.product': 'Product',
     'footer.support': 'Support',
     'footer.company': 'Company',

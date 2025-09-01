@@ -59,7 +59,8 @@ package "Backend" {
 
 database "Database" {
   [PostgreSQL]
-}`,
+}
+@enduml`,
       icon: Settings,
     },
     reviewer: {
