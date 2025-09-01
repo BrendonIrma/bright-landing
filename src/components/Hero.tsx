@@ -59,13 +59,7 @@ package "Backend" {
 
 database "Database" {
   [PostgreSQL]
-}
-
-[React App] --> [API Gateway]
-[API Gateway] --> [User Service]
-[API Gateway] --> [Data Service]
-[User Service] --> [PostgreSQL]
-[Data Service] --> [PostgreSQL]`,
+}`,
       icon: Settings,
     },
     reviewer: {
@@ -88,18 +82,7 @@ database "Database" {
 [Logo] [Menu] [Search] [User]
 
 Main Content Area
-==================
-
-┌─────────┐  ┌─────────┐
-│ Card 1  │  │ Card 2  │
-│         │  │         │
-│ Text    │  │ Image   │
-│ Button  │  │ Form    │
-└─────────┘  └─────────┘
-
-Footer
-==================
-[Links] [Social] [Contact]`,
+==================`,
       icon: Palette,
     },
     pm: {
@@ -113,11 +96,6 @@ title Диаграмма Ганта - Проект AI IDE BAS
 [Разработка] starts 2025-02-05 and lasts 30 days
 [Тестирование] starts 2025-03-07 and lasts 14 days
 [Внедрение] starts 2025-03-21 and lasts 7 days
-
-[Анализ требований] -> [Проектирование]
-[Проектирование] -> [Разработка]
-[Разработка] -> [Тестирование]
-[Тестирование] -> [Внедрение]
 @enduml`,
       icon: Calendar,
     },
