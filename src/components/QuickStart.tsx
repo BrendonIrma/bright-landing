@@ -83,12 +83,16 @@ const QuickStart = () => {
                 {t('quickstart.help.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button variant="outline">
-                  {t('quickstart.help.docs')}
+                <Button variant="outline" asChild>
+                  <a href="https://t.me/AI_IDE_BAS" target="_blank" rel="noopener noreferrer">
+                    {t('quickstart.help.docs')}
+                  </a>
                 </Button>
-                <Button variant="default">
-                  {t('quickstart.help.contact')}
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                <Button variant="default" asChild>
+                  <a href="https://t.me/+ZBkoEo8HhtFjYjIy" target="_blank" rel="noopener noreferrer">
+                    {t('quickstart.help.contact')}
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </a>
                 </Button>
               </div>
             </CardContent>

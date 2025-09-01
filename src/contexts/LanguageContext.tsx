@@ -128,8 +128,8 @@ const translations = {
     'quickstart.features.3': 'Поддержка всех языков VS Code',
     'quickstart.help.title': 'Нужна помощь с настройкой?',
     'quickstart.help.description': 'Вы можете связаться с нами через наши социальные сети.',
-    'quickstart.help.docs': 'Посмотреть документацию',
-    'quickstart.help.contact': 'Связаться с нами',
+    'quickstart.help.docs': 'Мы в telegram',
+    'quickstart.help.contact': 'Помощь с настройкой',
     'quickstart.video.button': 'Видеоинструкция',
     'quickstart.text.button': 'Текстовая инструкция',
     
@@ -278,8 +278,8 @@ const translations = {
     'quickstart.features.3': 'Support for all VS Code languages',
     'quickstart.help.title': 'Need help with setup?',
     'quickstart.help.description': 'You can contact us through our social networks.',
-    'quickstart.help.docs': 'View Documentation',
-    'quickstart.help.contact': 'Contact Us',
+    'quickstart.help.docs': 'We are on Telegram',
+    'quickstart.help.contact': 'Setup Help',
     'quickstart.video.button': 'Video Tutorial',
     'quickstart.text.button': 'Text Tutorial',
     
