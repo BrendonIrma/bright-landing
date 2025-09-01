@@ -32,14 +32,18 @@ const translations = {
     'hero.tryMode': 'Попробовать режим',
     
     // Hero Demo Modes  
-    'hero.mode.ba.title': 'Режим Бизнес Аналитика',
-    'hero.mode.ba.description': 'US, UC, бизнес-процессы, критерии приемки, создает Глоссарий',
-    'hero.mode.sa.title': 'Режим Системного Аналитика', 
-    'hero.mode.sa.description': 'Sequence-диаграммы, OpenAPI, AsyncAPI, логика работы фичи, модель данных + ERD, создает НФТ',
-    'hero.mode.architect.title': 'Режим Архитектора',
-    'hero.mode.architect.description': 'Component-диаграммы, архитектурные паттерны, масштабируемость, C4 модели',
-    'hero.mode.reviewer.title': 'Режим Ревьюера',
-    'hero.mode.reviewer.description': 'Проверка артефактов: на полноту требований, на соответствие правилам архитектуры, на соответствие правилам кибербезопасности, а также проверка от инженера поддержки',
+    'hero.mode.ba.title': 'Режим бизнес аналитика',
+    'hero.mode.ba.description': 'Возможность создавать:\n1. User Stories\n2. Use Cases\n3. Activity Diagram в формате PlantUML\n4. Acceptance Criteria\n5. Формирование глоссария проекта\n6. Сбор сведений о стейкхолдерах проекта\n7. Отчет о проверке выбранного артефакта',
+    'hero.mode.sa.title': 'Режим системного аналитика', 
+    'hero.mode.sa.description': 'Возможность создавать:\n1. Описание backend логики\n2. Создание диаграммы ERD\n3. Создание Sequence диаграммы\n4. Создание спецификации в формате OpenAPI\n5. Создание спецификации для Kafka Message Broker в формате AsyncAPI\n6. Создание нефункциональных требований\n7. Отчет о проверке выбранного артефакта',
+    'hero.mode.architect.title': 'Режим архитектора',
+    'hero.mode.architect.description': 'Возможность создавать:\n1. Диаграмма контекста\n2. Диаграмма компонентов',
+    'hero.mode.reviewer.title': 'Режим ревьюера',
+    'hero.mode.reviewer.description': 'Возможность делать:\n1. Проверку проекта на предмет качества требований и артефактов бизнес и системного аналитика\n2. Проверку проекта по требованиям кибербезопасности\n3. Проверку архитектурных решений проекта\n4. Проверку проекта инженером поддержки',
+    'hero.mode.designer.title': 'Режим дизайнера',
+    'hero.mode.designer.description': 'Возможность создавать прототип (мокап, wireframe)',
+    'hero.mode.pm.title': 'Режим проектного менеджера',
+    'hero.mode.pm.description': '1. Формирование бэклога спринта - обоснование задействованных ролей в команде разработки и оценка трудоемкости на основании артефактов\n2. Формулирование задачи - постановка задачи в разработку\n3. Приоритизация задач - диаграмма Ганта в формате PlantUML\n4. Определение зависимостей - диаграмма зависимостей в формате PlantUML',
     
     // Mode Cards
     'modes.badge': 'Режимы работы',
@@ -179,13 +183,17 @@ const translations = {
     
     // Hero Demo Modes  
     'hero.mode.ba.title': 'Business Analyst Mode',
-    'hero.mode.ba.description': 'US, UC, business processes, acceptance criteria, creates Glossary',
+    'hero.mode.ba.description': 'Ability to create:\n1. User Stories\n2. Use Cases\n3. Activity Diagram in PlantUML format\n4. Acceptance Criteria\n5. Project glossary formation\n6. Project stakeholder information gathering\n7. Selected artifact verification report',
     'hero.mode.sa.title': 'System Analyst Mode',
-    'hero.mode.sa.description': 'Sequence diagrams, OpenAPI, AsyncAPI, feature logic, data model + ERD, creates NFR',
+    'hero.mode.sa.description': 'Ability to create:\n1. Backend logic description\n2. ERD diagram creation\n3. Sequence diagram creation\n4. OpenAPI format specification creation\n5. Kafka Message Broker specification in AsyncAPI format\n6. Non-functional requirements creation\n7. Selected artifact verification report',
     'hero.mode.architect.title': 'Architect Mode',
-    'hero.mode.architect.description': 'Component diagrams, architectural patterns, scalability, C4 models',
+    'hero.mode.architect.description': 'Ability to create:\n1. Context diagram\n2. Component diagram',
     'hero.mode.reviewer.title': 'Reviewer Mode',
-    'hero.mode.reviewer.description': 'Artifact checks: requirements completeness, architecture compliance, cybersecurity compliance, and support engineer checks',
+    'hero.mode.reviewer.description': 'Ability to perform:\n1. Project verification for quality of requirements and artifacts from business and system analysts\n2. Project verification for cybersecurity requirements\n3. Project architectural decisions verification\n4. Project verification by support engineer',
+    'hero.mode.designer.title': 'Designer Mode',
+    'hero.mode.designer.description': 'Ability to create prototype (mockup, wireframe)',
+    'hero.mode.pm.title': 'Project Manager Mode',
+    'hero.mode.pm.description': '1. Sprint backlog formation - justification of involved roles in development team and effort estimation based on artifacts\n2. Task formulation - task assignment for development\n3. Task prioritization - Gantt chart in PlantUML format\n4. Dependency definition - dependency diagram in PlantUML format',
     
     // Mode Cards
     'modes.badge': 'Work Modes',

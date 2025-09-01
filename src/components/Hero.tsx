@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Play, Sparkles, Zap, Brain, Code2, Settings } from "lucide-react";
+import { ArrowRight, Play, Sparkles, Zap, Brain, Code2, Settings, Palette, Calendar } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Hero = () => {
@@ -79,6 +79,44 @@ database "Database" {
 
 **Статус:** ✅ Требования корректны`,
       icon: Zap,
+    },
+    designer: {
+      title: t('hero.mode.designer.title'),
+      description: t('hero.mode.designer.description'),
+      code: `┌─────────────────────────────────────┐
+│           Header Navigation           │
+├─────────────────────────────────────┤
+│  [Logo]  [Menu]  [Search]  [User]  │
+├─────────────────────────────────────┤
+│                                     │
+│        Main Content Area            │
+│                                     │
+│  ┌─────────────┐  ┌─────────────┐   │
+│  │   Card 1    │  │   Card 2    │   │
+│  │             │  │             │   │
+│  └─────────────┘  └─────────────┘   │
+│                                     │
+└─────────────────────────────────────┘`,
+      icon: Palette,
+    },
+    pm: {
+      title: t('hero.mode.pm.title'),
+      description: t('hero.mode.pm.description'),
+      code: `@startuml
+title Диаграмма Ганта - Проект AI IDE BAS
+
+[Анализ требований] starts 2025-01-01 and lasts 14 days
+[Проектирование] starts 2025-01-15 and lasts 21 days
+[Разработка] starts 2025-02-05 and lasts 30 days
+[Тестирование] starts 2025-03-07 and lasts 14 days
+[Внедрение] starts 2025-03-21 and lasts 7 days
+
+[Анализ требований] -> [Проектирование]
+[Проектирование] -> [Разработка]
+[Разработка] -> [Тестирование]
+[Тестирование] -> [Внедрение]
+@enduml`,
+      icon: Calendar,
     },
   };
 
@@ -168,7 +206,7 @@ database "Database" {
                       {demoModes[activeDemo].title}
                     </h4>
                   </div>
-                  <p className="text-muted-foreground">
+                  <p className="text-muted-foreground whitespace-pre-line">
                     {demoModes[activeDemo].description}
                   </p>
                 </div>

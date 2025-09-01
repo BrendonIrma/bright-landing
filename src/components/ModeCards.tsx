@@ -1,9 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { 
-  ArrowRight,
-  Code
-} from "lucide-react";
+
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const ModeCards = () => {
@@ -24,30 +19,7 @@ const ModeCards = () => {
 
 
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <Card className="max-w-2xl mx-auto">
-            <CardContent className="p-8">
-              <Code className="w-12 h-12 mx-auto mb-4 text-primary" />
-              <h3 className="text-2xl font-semibold mb-4">
-                {t('modes.cta.title')}
-              </h3>
-              <p className="text-muted-foreground mb-6">
-                {t('modes.cta.description')}
-              </p>
-              <Button 
-                variant="hero" 
-                size="lg"
-                asChild
-              >
-                <a href="https://marketplace.visualstudio.com/items?itemName=8eton.ai-ide-bas" target="_blank" rel="noopener noreferrer">
-                  {t('modes.cta.button')}
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </a>
-              </Button>
-            </CardContent>
-          </Card>
-        </div>
+
       </div>
     </section>
   );
