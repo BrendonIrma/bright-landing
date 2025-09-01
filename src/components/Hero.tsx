@@ -116,7 +116,7 @@ title Диаграмма Ганта - Проект AI IDE BAS
             {t('hero.badge')}
           </Badge>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
+          <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-hero bg-clip-text text-transparent leading-tight">
             {t('hero.title').split('\n').map((line, index) => (
               <React.Fragment key={index}>
                 {line}
@@ -125,15 +125,15 @@ title Диаграмма Ганта - Проект AI IDE BAS
             ))}
           </h1>
           
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed px-4">
             {t('hero.description')}
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 px-4">
             <Button 
               variant="hero" 
               size="hero" 
-              className="animate-scale-in"
+              className="animate-scale-in w-full sm:w-auto"
               asChild
             >
               <a href="https://marketplace.visualstudio.com/items?itemName=8eton.ai-ide-bas" target="_blank" rel="noopener noreferrer">
@@ -144,7 +144,7 @@ title Диаграмма Ганта - Проект AI IDE BAS
             <Button 
               variant="glass" 
               size="hero" 
-              className="animate-scale-in"
+              className="animate-scale-in w-full sm:w-auto"
               onClick={() => window.open('https://vkvideo.ru/video-231325948_456239030', '_blank')}
             >
               <Play className="w-5 h-5 mr-2" />
@@ -154,12 +154,12 @@ title Диаграмма Ганта - Проект AI IDE BAS
         </div>
 
         {/* Demo Section */}
-        <div className="max-w-6xl mx-auto animate-slide-up">
+        <div className="max-w-6xl mx-auto animate-slide-up px-4">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-semibold mb-4">{t('hero.tryModes')}</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4">{t('hero.tryModes')}</h3>
             <div className="flex flex-col gap-3">
               {/* Первая строка - первые 3 режима */}
-              <div className="flex justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                 {Object.entries(demoModes).slice(0, 3).map(([key, mode]) => {
                   const IconComponent = mode.icon;
                   return (
@@ -168,16 +168,17 @@ title Диаграмма Ганта - Проект AI IDE BAS
                       variant={activeDemo === key ? "default" : "glass"}
                       size="sm"
                       onClick={() => setActiveDemo(key)}
-                      className="transition-all duration-300 whitespace-nowrap"
+                      className="transition-all duration-300 text-xs sm:text-sm"
                     >
-                      <IconComponent className="w-4 h-4 mr-2" />
-                      {mode.title}
+                      <IconComponent className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                      <span className="hidden xs:inline">{mode.title}</span>
+                      <span className="xs:hidden">{mode.title.split(' ')[0]}</span>
                     </Button>
                   );
                 })}
               </div>
               {/* Вторая строка - последние 3 режима */}
-              <div className="flex justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
                 {Object.entries(demoModes).slice(3).map(([key, mode]) => {
                   const IconComponent = mode.icon;
                   return (
@@ -186,10 +187,11 @@ title Диаграмма Ганта - Проект AI IDE BAS
                       variant={activeDemo === key ? "default" : "glass"}
                       size="sm"
                       onClick={() => setActiveDemo(key)}
-                      className="transition-all duration-300 whitespace-nowrap"
+                      className="transition-all duration-300 text-xs sm:text-sm"
                     >
-                      <IconComponent className="w-4 h-4 mr-2" />
-                      {mode.title}
+                      <IconComponent className="w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
+                      <span className="hidden xs:inline">{mode.title}</span>
+                      <span className="xs:hidden">{mode.title.split(' ')[0]}</span>
                     </Button>
                   );
                 })}
@@ -198,23 +200,23 @@ title Диаграмма Ганта - Проект AI IDE BAS
           </div>
 
           <Card className="max-w-4xl mx-auto">
-            <CardContent className="p-6">
-              <div className="grid md:grid-cols-2 gap-6 items-center">
+            <CardContent className="p-4 sm:p-6">
+              <div className="grid md:grid-cols-2 gap-4 sm:gap-6 items-start">
                 <div>
                   <div className="flex items-center mb-4">
                     {React.createElement(demoModes[activeDemo].icon, {
-                      className: "w-6 h-6 mr-3 text-primary"
+                      className: "w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3 text-primary"
                     })}
-                    <h4 className="text-xl font-semibold">
+                    <h4 className="text-lg sm:text-xl font-semibold">
                       {demoModes[activeDemo].title}
                     </h4>
                   </div>
-                  <p className="text-muted-foreground whitespace-pre-line">
+                  <p className="text-muted-foreground whitespace-pre-line text-sm sm:text-base">
                     {demoModes[activeDemo].description}
                   </p>
                 </div>
-                <div className="bg-muted/50 rounded-lg p-4 border border-glass-border">
-                  <pre className="text-sm font-mono text-muted-foreground overflow-x-auto">
+                <div className="bg-muted/50 rounded-lg p-3 sm:p-4 border border-glass-border">
+                  <pre className="text-xs sm:text-sm font-mono text-muted-foreground overflow-x-auto">
                     <code>{demoModes[activeDemo].code}</code>
                   </pre>
                 </div>

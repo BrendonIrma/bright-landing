@@ -103,8 +103,7 @@ const Header = () => {
                 </Button>
                 <Button variant="ghost" size="sm" className="w-full justify-start" asChild>
                   <a href="#footer" className="scroll-smooth">
-                    <Users className="w-4 h-4 mr-2" />
-                    Сообщество
+                    {t('header.community')}
                   </a>
                 </Button>
                 <Button 
