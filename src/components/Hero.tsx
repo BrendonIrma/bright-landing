@@ -184,7 +184,7 @@ title Диаграмма Ганта - Проект AI IDE BAS
                     variant={activeDemo === key ? "default" : "glass"}
                     size="sm"
                     onClick={() => setActiveDemo(key)}
-                    className="transition-all duration-300"
+                    className="transition-all duration-300 whitespace-nowrap"
                   >
                     <IconComponent className="w-4 h-4 mr-2" />
                     {mode.title}

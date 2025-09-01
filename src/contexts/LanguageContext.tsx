@@ -28,7 +28,7 @@ const translations = {
     'hero.description': 'Не пишите документацию вручную — AI IDE BAS сделает это за вас',
     'hero.startFree': 'Установить AI IDE BAS',
     'hero.watchDemo': 'Посмотреть демо',
-    'hero.tryModes': 'Попробуйте разные режимы',
+    'hero.tryModes': 'Режимы AI IDE BAS',
     'hero.tryMode': 'Попробовать режим',
     
     // Hero Demo Modes  
@@ -178,7 +178,7 @@ const translations = {
     'hero.description': 'Don\'t write documentation manually — AI IDE BAS will do it for you',
     'hero.startFree': 'Install AI IDE BAS',
     'hero.watchDemo': 'Watch Demo',
-    'hero.tryModes': 'Try Different Modes',
+    'hero.tryModes': 'AI IDE BAS Modes',
     'hero.tryMode': 'Try Mode',
     
     // Hero Demo Modes  
