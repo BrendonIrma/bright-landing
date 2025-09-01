@@ -67,7 +67,11 @@ const Footer = () => {
                         target="_blank" 
                         rel="noopener noreferrer"
                       >
-                        <IconComponent className="w-4 h-4" />
+                        {social.name === "VK" ? (
+                          <IconComponent className="w-5 h-5" />
+                        ) : (
+                          <IconComponent className="w-4 h-4" />
+                        )}
                       </a>
                     </Button>
                   );
