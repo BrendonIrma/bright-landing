@@ -284,20 +284,23 @@ database "Database" {
 - [ ] Действия выполнимы в рамках предметной области
 - [ ] Результаты достижимы и измеримы
 
-**Статус:** ✅ Требования корректны`,icon:Wl},designer:{title:n("hero.mode.designer.title"),description:n("hero.mode.designer.description"),code:`┌─────────────────────────────────┐
-│         Header                    │
-├─────────────────────────────────┤
-│  [Logo] [Menu] [Search] [User] │
-├─────────────────────────────────┤
-│                                 │
-│      Main Content Area          │
-│                                 │
-│  ┌─────────┐  ┌─────────┐      │
-│  │ Card 1  │  │ Card 2  │      │
-│  │         │  │         │      │
-│  └─────────┘  └─────────┘      │
-│                                 │
-└─────────────────────────────────┘`,icon:mw},pm:{title:n("hero.mode.pm.title"),description:n("hero.mode.pm.description"),code:`@startuml
+**Статус:** ✅ Требования корректны`,icon:Wl},designer:{title:n("hero.mode.designer.title"),description:n("hero.mode.designer.description"),code:`Header
+==================
+[Logo] [Menu] [Search] [User]
+
+Main Content Area
+==================
+
+┌─────────┐  ┌─────────┐
+│ Card 1  │  │ Card 2  │
+│         │  │         │
+│ Text    │  │ Image   │
+│ Button  │  │ Form    │
+└─────────┘  └─────────┘
+
+Footer
+==================
+[Links] [Social] [Contact]`,icon:mw},pm:{title:n("hero.mode.pm.title"),description:n("hero.mode.pm.description"),code:`@startuml
 title Диаграмма Ганта - Проект AI IDE BAS
 
 [Анализ требований] starts 2025-01-01 and lasts 14 days
