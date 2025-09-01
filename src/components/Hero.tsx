@@ -83,20 +83,23 @@ database "Database" {
     designer: {
       title: t('hero.mode.designer.title'),
       description: t('hero.mode.designer.description'),
-      code: `┌─────────────────────────────────┐
-│         Header                    │
-├─────────────────────────────────┤
-│  [Logo] [Menu] [Search] [User] │
-├─────────────────────────────────┤
-│                                 │
-│      Main Content Area          │
-│                                 │
-│  ┌─────────┐  ┌─────────┐      │
-│  │ Card 1  │  │ Card 2  │      │
-│  │         │  │         │      │
-│  └─────────┘  └─────────┘      │
-│                                 │
-└─────────────────────────────────┘`,
+      code: `Header
+==================
+[Logo] [Menu] [Search] [User]
+
+Main Content Area
+==================
+
+┌─────────┐  ┌─────────┐
+│ Card 1  │  │ Card 2  │
+│         │  │         │
+│ Text    │  │ Image   │
+│ Button  │  │ Form    │
+└─────────┘  └─────────┘
+
+Footer
+==================
+[Links] [Social] [Contact]`,
       icon: Palette,
     },
     pm: {
