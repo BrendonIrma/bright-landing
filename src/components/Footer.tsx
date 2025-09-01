@@ -28,10 +28,10 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="flex justify-center">
-            {/* Company Info */}
-            <div className="space-y-6 text-center">
-              <div className="flex items-center space-x-2 justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Company Info - слева */}
+            <div className="space-y-6">
+              <div className="flex items-center space-x-2">
                 <img 
                   src="/логоAIFirstIDEBAS .png" 
                   alt="AI IDE BAS Logo" 
@@ -45,7 +45,11 @@ const Footer = () => {
               <p className="text-muted-foreground max-w-md leading-relaxed">
                 {t('footer.description')}
               </p>
+            </div>
 
+            {/* Community - справа */}
+            <div className="space-y-6">
+              <h3 className="text-lg font-semibold">Сообщество</h3>
               <div className="flex items-center space-x-4">
                 {socialLinks.map((social) => {
                   const IconComponent = social.icon;
@@ -70,6 +74,7 @@ const Footer = () => {
                 })}
               </div>
             </div>
+          </div>
 
 
           </div>
