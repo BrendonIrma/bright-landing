@@ -5,7 +5,7 @@ interface VkIconProps {
   size?: number;
 }
 
-const VkIcon: React.FC<VkIconProps> = ({ className = "", size = 24 }) => {
+const VkIcon: React.FC<VkIconProps> = ({ className = "", size = 16 }) => {
   return (
     <svg
       width={size}
