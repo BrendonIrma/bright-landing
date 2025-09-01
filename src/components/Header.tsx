@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Github, ArrowUpRight, Globe } from "lucide-react";
+import { Menu, X, ArrowUpRight, Globe, Users } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
@@ -52,10 +52,14 @@ const Header = () => {
               <Globe className="w-4 h-4 mr-2" />
               {language === 'ru' ? 'EN' : 'RU'}
             </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <a href="https://github.com/dradns/AI-IDE-BAS" target="_blank" rel="noopener noreferrer">
-                <Github className="w-4 h-4 mr-2" />
-                {t('header.github')}
+            <Button 
+              variant="ghost" 
+              size="sm"
+              asChild
+            >
+              <a href="#footer" className="scroll-smooth">
+                <Users className="w-4 h-4 mr-2" />
+                Сообщество
               </a>
             </Button>
             <Button 
@@ -107,9 +111,9 @@ const Header = () => {
                   {language === 'ru' ? 'EN' : 'RU'}
                 </Button>
                 <Button variant="ghost" size="sm" className="w-full justify-start" asChild>
-                  <a href="https://github.com/dradns/AI-IDE-BAS" target="_blank" rel="noopener noreferrer">
-                    <Github className="w-4 h-4 mr-2" />
-                    {t('header.github')}
+                  <a href="#footer" className="scroll-smooth">
+                    <Users className="w-4 h-4 mr-2" />
+                    Сообщество
                   </a>
                 </Button>
                 <Button 
