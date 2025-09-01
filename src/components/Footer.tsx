@@ -11,32 +11,7 @@ import VkIcon from "@/components/icons/VkIcon";
 const Footer = () => {
   const { t } = useLanguage();
   
-  const navigation = {
-    product: [
-      { name: t('footer.product.features'), href: "#features" },
-      { name: t('footer.product.modes'), href: "#hero" },
-      { name: t('footer.product.integrations'), href: "#integrations" },
-      { name: t('footer.product.pricing'), href: "#pricing" },
-    ],
-    support: [
-      { name: t('footer.support.docs'), href: "#" },
-      { name: t('footer.support.api'), href: "#" },
-      { name: t('footer.support.community'), href: "#community" },
-      { name: t('footer.support.help'), href: "#" },
-    ],
-    company: [
-      { name: t('footer.company.about'), href: "#" },
-      { name: t('footer.company.blog'), href: "#" },
-      { name: t('footer.company.careers'), href: "#" },
-      { name: t('footer.company.press'), href: "#" },
-    ],
-    legal: [
-      { name: t('footer.legal.privacy'), href: "#" },
-      { name: t('footer.legal.terms'), href: "#" },
-      { name: t('footer.legal.cookies'), href: "#" },
-      { name: t('footer.legal.security'), href: "#" },
-    ]
-  };
+
 
   const socialLinks = [
     { name: "GitHub", icon: Github, href: "https://github.com/dradns/AI-IDE-BAS" },
@@ -53,10 +28,10 @@ const Footer = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Main Footer Content */}
         <div className="py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <div className="flex justify-center">
             {/* Company Info */}
-            <div className="lg:col-span-2 space-y-6">
-              <div className="flex items-center space-x-2">
+            <div className="space-y-6 text-center">
+              <div className="flex items-center space-x-2 justify-center">
                 <img 
                   src="/логоAIFirstIDEBAS .png" 
                   alt="AI IDE BAS Logo" 
@@ -96,104 +71,13 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Navigation Links */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 lg:col-span-3">
-              <div>
-                <h3 className="font-semibold mb-4">{t('footer.product')}</h3>
-                <ul className="space-y-3">
-                  {navigation.product.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
 
-              <div>
-                <h3 className="font-semibold mb-4">{t('footer.support')}</h3>
-                <ul className="space-y-3">
-                  {navigation.support.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm hover:translate-x-1 inline-block flex items-center"
-                      >
-                        {item.name}
-                        {item.name === "API Reference" && (
-                          <ArrowUpRight className="w-3 h-3 ml-1" />
-                        )}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div>
-                <h3 className="font-semibold mb-4">{t('footer.company')}</h3>
-                <ul className="space-y-3">
-                  {navigation.company.map((item) => (
-                    <li key={item.name}>
-                      <a
-                        href={item.href}
-                        className="text-muted-foreground hover:text-foreground transition-colors duration-300 text-sm hover:translate-x-1 inline-block"
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
           </div>
         </div>
 
-        {/* Newsletter */}
-        <div className="py-8 border-t border-glass-border">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div>
-              <h3 className="font-semibold mb-2">{t('footer.newsletter.title')}</h3>
-              <p className="text-muted-foreground text-sm">
-                {t('footer.newsletter.description')}
-              </p>
-            </div>
-            <div className="flex space-x-2 w-full md:w-auto">
-              <input
-                type="email"
-                placeholder={t('footer.newsletter.placeholder')}
-                className="flex-1 md:w-64 px-3 py-2 text-sm border border-glass-border rounded-lg bg-glass/30 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/50"
-              />
-              <Button variant="default" size="sm">
-                {t('footer.newsletter.subscribe')}
-              </Button>
-            </div>
-          </div>
-        </div>
 
-        {/* Bottom Bar */}
-        <div className="py-6 border-t border-glass-border">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-6 text-sm text-muted-foreground">
-              <span>{t('footer.copyright')}</span>
-              <div className="hidden md:flex items-center space-x-4">
-                {navigation.legal.map((item, index) => (
-                  <a
-                    key={item.name}
-                    href={item.href}
-                    className="hover:text-foreground transition-colors duration-300"
-                  >
-                    {item.name}
-                  </a>
-                ))}
-              </div>
-            </div>
-            
-          </div>
-        </div>
+
+
       </div>
     </footer>
   );
