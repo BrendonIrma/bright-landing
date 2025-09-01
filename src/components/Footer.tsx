@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { 
   Github, 
   Send, 
-  MessageSquare,
+  Users,
   ArrowUpRight,
   Youtube
 } from "lucide-react";
@@ -41,7 +41,7 @@ const Footer = () => {
   const socialLinks = [
     { name: "GitHub", icon: Github, href: "https://github.com/dradns/AI-IDE-BAS" },
     { name: "Telegram", icon: Send, href: "https://t.me/AI_IDE_BAS" },
-    { name: "VK", icon: MessageSquare, href: "https://vk.com/ai_ide_bas" },
+    { name: "VK", icon: Users, href: "https://vk.com/ai_ide_bas" },
     { name: "YouTube", icon: Youtube, href: "https://www.youtube.com/channel/UC5OIZ9y0DScRQ3qGxfg1w?ysclid=mf10fagtyd602830080" },
   ];
 
